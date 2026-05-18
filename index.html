@@ -113,6 +113,7 @@
     max-width: 1100px;
     margin: 48px auto;
     padding: 0 24px;
+    scroll-margin-top: 110px;
   }
   .brand-header {
     display: flex;
@@ -224,6 +225,33 @@
   .spec-table td { padding: 5px 4px; }
   .spec-table td:first-child { color: var(--text-muted); width: 42%; }
   .spec-table td:last-child { color: var(--text); font-weight: 600; }
+  .variant-box {
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.22);
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin: 0 0 12px;
+  }
+  .variant-box strong {
+    display: block;
+    color: var(--gold-light);
+    font-size: 0.74rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .variant-box ul {
+    list-style: none;
+    display: grid;
+    gap: 5px;
+  }
+  .variant-box li {
+    border-left: 2px solid rgba(201,168,76,0.35);
+    padding-left: 8px;
+    font-size: 0.78rem;
+    color: #d7cfbf;
+    line-height: 1.4;
+  }
   .card-footer {
     padding: 12px 18px;
     border-top: 1px solid var(--border);
@@ -405,352 +433,16 @@
 <div class="hero">
   <h2>Nuovi Articoli GDO 2026</h2>
   <p>Una selezione esclusiva di prodotti premium da aziende certificate, pensata per arricchire l'assortimento della Grande Distribuzione con qualità, innovazione e marginalità.</p>
-  <div class="hero-badge">6 AZIENDE · 28 PRODOTTI SELEZIONATI</div>
+  <div class="hero-badge">4 AZIENDE · 27 PRODOTTI SELEZIONATI</div>
 </div>
 
 <!-- NAV PILLS -->
 <nav class="nav-pills">
-  <a href="#geldi">🥩 Geldi</a>
-  <a href="#emmefood">❄️ Emmefood</a>
   <a href="#luxury-tapas">🥩 Luxury Tapas</a>
   <a href="#agricola-tria">🌿 Agricola di Tria</a>
   <a href="#bachetti">🫒 Bachetti Food</a>
   <a href="#borges">🫙 Borges</a>
 </nav>
-
-
-<!-- ═══════════════════════════════════════════
-     AZIENDA 0: GELDI SPA
-════════════════════════════════════════════ -->
-<section class="brand-section" id="geldi">
-  <div class="brand-header">
-    <div class="brand-logo-badge">GELDI</div>
-    <div class="brand-info">
-      <h2>Geldi SPA</h2>
-      <p>Carni fresche refrigerate — Guardiagrele (CH) · Bollo CE IT 2777S · Origine UE</p>
-    </div>
-  </div>
-  <div class="brand-desc">
-    <strong style="color:var(--gold-light)">Qualità e freschezza dalla tradizione abruzzese.</strong> Geldi SPA seleziona e lavora carni bovine e suine fresche di alta qualità, confezionate in atmosfera protettiva o sottovuoto e distribuite con automezzi refrigerati. Ogni prodotto è corredato di scheda tecnica con tracciabilità completa, caratteristiche microbiologiche certificate e etichettatura allergeni conforme al Regolamento CE 1169/2011.
-  </div>
-
-  <div class="product-grid">
-
-    <!-- CARNE TRITA BOVINA -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Carne Trita Bovina Prima Scelta</h3>
-        <div class="subtitle">Bovino Adulto — Cod. CBA8</div>
-      </div>
-      <div class="card-body">
-        <p>Carne trita di bovino adulto prima scelta, confezionata in ATM. Ideale per hamburger artigianali, ragù, polpette e preparazioni al momento.</p>
-        <table class="spec-table">
-          <tr><td>Ingredienti</td><td>Carne bovina, E331, E262, aromi naturali, destrosio, sale, E300</td></tr>
-          <tr><td>Conservazione</td><td>0°C – 2°C</td></tr>
-          <tr><td>Shelf life</td><td>5 giorni dalla produzione</td></tr>
-          <tr><td>Confezionamento</td><td>ATM (N₂ 10%, CO₂ 20%, O₂ 70%)</td></tr>
-          <tr><td>Origine carni</td><td>UE</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Bovino</span>
-            <span class="badge-icon">Fresco</span>
-          </div>
-          <a href="Geldi_prodotti/bovino carne trita.pdf" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Scheda Tecnica
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- SPEZZATINO BOVINO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Spezzatino Bovino S/Osso</h3>
-        <div class="subtitle">Bovino Adulto 25/40g — Cod. CBA17</div>
-      </div>
-      <div class="card-body">
-        <p>Spezzatino di bovino adulto senza osso, porzionato a 25/40g. Ingrediente puro senza additivi, perfetto per cotture lente, stufati e preparazioni gastronomiche.</p>
-        <table class="spec-table">
-          <tr><td>Ingredienti</td><td>Carne di bovino adulto</td></tr>
-          <tr><td>Conservazione</td><td>0°C – 2°C</td></tr>
-          <tr><td>Shelf life</td><td>7 giorni dalla produzione</td></tr>
-          <tr><td>Confezionamento</td><td>ATM (N₂ 10%, CO₂ 20%, O₂ 70%)</td></tr>
-          <tr><td>Origine carni</td><td>UE · Senza allergeni</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Bovino</span>
-            <span class="badge-icon gf">No Allergeni</span>
-          </div>
-          <a href="Geldi_prodotti/bovino spezzatino.pdf" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Scheda Tecnica
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- HAMBURGER BOVINO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Hamburger Bovino</h3>
-        <div class="subtitle">120/150g · Ø 13cm — Cod. CBA18</div>
-      </div>
-      <div class="card-body">
-        <p>Hamburger di bovino adulto (86%) dal diametro 13cm, pronto per la griglia o padella. Valori nutrizionali ottimali: 22g proteine, 176 kcal per 100g.</p>
-        <table class="spec-table">
-          <tr><td>Carne bovina</td><td>86%</td></tr>
-          <tr><td>Energia</td><td>738 kJ / 176 kcal per 100g</td></tr>
-          <tr><td>Proteine</td><td>22g per 100g</td></tr>
-          <tr><td>Shelf life</td><td>5 giorni · Conservare 0°C–2°C</td></tr>
-          <tr><td>Confezionamento</td><td>ATM (N₂ 10%, CO₂ 20%, O₂ 70%)</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Bovino</span>
-            <span class="badge-icon">Pronto Griglia</span>
-          </div>
-          <a href="Geldi_prodotti/hamburgher bovino.pdf" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Scheda Tecnica
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- SALSICCIA FRESCA -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Salsiccia Fresca di Suino</h3>
-        <div class="subtitle">Suino — Cod. CSUI11R</div>
-      </div>
-      <div class="card-body">
-        <p>Salsiccia fresca Geldi.di con carne di suino (84%), fibre vegetali di pisello e psyllium. Ricca di proteine, dal gusto autentico della tradizione.</p>
-        <table class="spec-table">
-          <tr><td>Carne suina</td><td>84%</td></tr>
-          <tr><td>Energia</td><td>1.208 kJ / 289 kcal per 100g</td></tr>
-          <tr><td>Proteine</td><td>17,5g per 100g</td></tr>
-          <tr><td>Shelf life</td><td>5 giorni · Conservare 0°C–2°C</td></tr>
-          <tr><td>Confezionamento</td><td>ATM (N₂ 10%, CO₂ 20%, O₂ 70%)</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Suino</span>
-            <span class="badge-icon">Fresca</span>
-          </div>
-          <a href="Geldi_prodotti/salsiccia suino.pdf" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Scheda Tecnica
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- ARISTA DI SUINO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Arista di Suino S/Osso S/Filetto</h3>
-        <div class="subtitle">4/5 kg — Cod. CSUI6</div>
-      </div>
-      <div class="card-body">
-        <p>Arista di suino disossata e sfilettata in pezzi da 4/5kg, confezionata sottovuoto. Ingrediente puro, senza additivi. Ideale per arrosti, affettati caldi e preparazioni gastronomiche.</p>
-        <table class="spec-table">
-          <tr><td>Ingredienti</td><td>Carne di suino</td></tr>
-          <tr><td>Pezzatura</td><td>4/5 kg per pezzo</td></tr>
-          <tr><td>Shelf life</td><td>7 giorni · Conservare 0°C–2°C</td></tr>
-          <tr><td>Confezionamento</td><td>Sottovuoto</td></tr>
-          <tr><td>Origine carni</td><td>UE · Senza allergeni</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Suino</span>
-            <span class="badge-icon gf">No Allergeni</span>
-          </div>
-          <a href="Geldi_prodotti/suino arista.pdf" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Scheda Tecnica
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- COLLO DI SUINO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Collo di Suino S/Osso Porzionato</h3>
-        <div class="subtitle">150/200g — Cod. CSUI2A</div>
-      </div>
-      <div class="card-body">
-        <p>Collo di suino disossato, rifilato e porzionato a 150/200g. Taglio versatile e saporito, ideale per grigliata, BBQ e cotture alla piastra.</p>
-        <table class="spec-table">
-          <tr><td>Ingredienti</td><td>Carne di suino</td></tr>
-          <tr><td>Pezzatura</td><td>150/200g per porzione</td></tr>
-          <tr><td>Shelf life</td><td>7 giorni · Conservare 0°C–2°C</td></tr>
-          <tr><td>Confezionamento</td><td>ATM (N₂ 10%, CO₂ 20%, O₂ 70%)</td></tr>
-          <tr><td>Origine carni</td><td>UE · Senza allergeni</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Suino</span>
-            <span class="badge-icon">BBQ</span>
-          </div>
-          <a href="Geldi_prodotti/suino collo.pdf" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Scheda Tecnica
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- COSTATINA DI SUINO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Costatina di Suino Porzionata</h3>
-        <div class="subtitle">100/120g — Cod. CSUI9A</div>
-      </div>
-      <div class="card-body">
-        <p>Costatina di suino porzionata a 100/120g, tagliate per griglia. Carne pura senza additivi, perfetta per BBQ, grigliata e cotture alla brace.</p>
-        <table class="spec-table">
-          <tr><td>Ingredienti</td><td>Carne di suino</td></tr>
-          <tr><td>Pezzatura</td><td>100/120g per pezzo</td></tr>
-          <tr><td>Shelf life</td><td>7 giorni · Conservare 0°C–2°C</td></tr>
-          <tr><td>Confezionamento</td><td>ATM (N₂ 10%, CO₂ 20%, O₂ 70%)</td></tr>
-          <tr><td>Origine carni</td><td>UE · Senza allergeni</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Suino</span>
-            <span class="badge-icon">Griglia</span>
-          </div>
-          <a href="Geldi_prodotti/suino costatina.pdf" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Scheda Tecnica
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /product-grid -->
-
-  <a href="https://www.geldi.it" target="_blank" class="btn-website">
-    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-    Sito Web Geldi
-  </a>
-</section>
-
-<hr class="section-divider">
-
-<!-- ═══════════════════════════════════════════
-     AZIENDA 1: EMMEFOOD
-════════════════════════════════════════════ -->
-<section class="brand-section" id="emmefood">
-  <div class="brand-header">
-    <div class="brand-logo-badge">EMME<br><span style="color:#c9a84c;font-size:0.9em;">FOOD</span></div>
-    <div class="brand-info">
-      <h2>Emmefood Professional</h2>
-      <p>Dal 1991, San Mauro Pascoli (FC) — Piatti gastronomici surgelati, Linea Ricettati e Semilavorati</p>
-    </div>
-  </div>
-  <div class="brand-tags">
-    <span class="tag">🇮🇹 100% Italiano</span>
-    <span class="tag">IFS Food V.8</span>
-    <span class="tag">❄️ Surgelato</span>
-    <span class="tag">+200 Ricette</span>
-    <span class="tag">11.700 m² Stabilimento</span>
-  </div>
-  <div class="brand-desc">
-    <strong style="color:var(--gold-light)">Chef si nasce, partner si diventa.</strong> Emmefood nasce nel 1991 a San Mauro Pascoli (FC), con un nuovo stabilimento tecnologicamente all'avanguardia in Europa (11.700 m², 7 linee produzione, 700 ingredienti processati). Certificazione <strong>IFS Food V.8</strong>. Oltre 800 clienti serviti, 2.800 tonnellate/anno, più di 200 ricette cucinate al giorno. Linea Ricettati: piatti completi pronti da rigenerare. Linea Semilavorati: basi professionali per personalizzare.
-  </div>
-
-  <div class="product-grid">
-
-    <!-- FAJITAS PETTO DI POLLO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Fajitas di Petto di Pollo</h3>
-        <div class="subtitle">Linea Semilavorati</div>
-      </div>
-      <div class="card-body">
-        <p>Petto di pollo cotto al 100% e tagliato a listrelle per fajitas. Ideale per wrap, insalate o aperitivi di qualità. Aspetto artigianale, cottura uniforme. Cotto in padella con spezie a piacere.</p>
-        <table class="spec-table">
-          <tr><td>Confezione</td><td>1 x 2 kg</td></tr>
-          <tr><td>Shelf life</td><td>18 mesi da surgelato · 8 giorni in frigo dopo scon.</td></tr>
-          <tr><td>Rigenerazione</td><td>Direttamente da surgelato in padella</td></tr>
-          <tr><td>Cert.</td><td>IFS Food V.8</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">IFS Food</span>
-            <span class="badge-icon">Cotto 100%</span>
-          </div>
-          <a href="EMMEFOOD Surgelato.pdf#page=11" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.11
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- FAJITAS SPEZIATE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Fajitas di Petto di Pollo Speziate</h3>
-        <div class="subtitle">Linea Semilavorati</div>
-      </div>
-      <div class="card-body">
-        <p>Petto di pollo cotto al 100%, tagliato a listrelle con mix di spezie aromatiche. Alta versatilità: tacos, fajitas messicane, insalate, panini. Pronto in pochi minuti da surgelato.</p>
-        <table class="spec-table">
-          <tr><td>Confezione</td><td>1 x 2 kg</td></tr>
-          <tr><td>Shelf life</td><td>18 mesi da surgelato · 8 giorni in frigo dopo scon.</td></tr>
-          <tr><td>Rigenerazione</td><td>Direttamente da surgelato in padella</td></tr>
-          <tr><td>Cert.</td><td>IFS Food V.8</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">IFS Food</span>
-            <span class="badge-icon">Tex-Mex</span>
-          </div>
-          <a href="EMMEFOOD Surgelato.pdf#page=11" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.11
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /product-grid -->
-
-  <a href="EMMEFOOD Surgelato.pdf" target="_blank" class="btn-catalog">
-    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-    Apri Catalogo Emmefood Professional
-  </a>
-  <a href="https://www.emmefood.com" target="_blank" class="btn-website">
-    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-    Sito Web
-  </a>
-</section>
-
-<hr class="section-divider">
 
 <!-- ═══════════════════════════════════════════
      AZIENDA 2: LUXURY TAPAS
@@ -776,32 +468,65 @@
 
   <div class="product-grid">
 
-    <!-- CAPPELLO DEL PRETE -->
+    <!-- GUANCIA DI MANZO -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Cappello del Prete — Vitello CBT</h3>
-        <div class="subtitle">Taglio premium, cottura 16h sottovuoto</div>
+        <h3>Guancia di Manzo CBT</h3>
+        <div class="subtitle">Bovino CBT — cottura +16h sottovuoto</div>
       </div>
       <div class="card-body">
-        <p>Taglio perfetto per la CBT, caratterizzato da venatura di collagene che richiede lunga cottura per sciogliersi. Consistenza gelatinosa, amplifica il sapore. Rigenera 20–25 min al forno a 200°C.</p>
+        <p>Guance di manzo cotte a bassa temperatura per oltre 16 ore. Prodotto tenero e ricco di succo di cottura, da servire intero, tagliato o porzionato con fondo bruno o salsa a piacere.</p>
         <table class="spec-table">
-          <tr><td>Confezione</td><td>2 sacchetti da ±2 kg</td></tr>
-          <tr><td>Shelf life</td><td>24 mesi (-18°C) · 3 mesi in frigo dopo scon.</td></tr>
-          <tr><td>Rigenerazione</td><td>20–25 min forno 200°C, irrorare col succo</td></tr>
-          <tr><td>Glutine</td><td>Senza Glutine ✓</td></tr>
+          <tr><td>Confezione</td><td>6 sacchetti da ±400 g</td></tr>
+          <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
+          <tr><td>Rigenerazione</td><td>5 min microonde 800W o 10 min bagnomaria</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
           <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">CBT</span>
+          <span class="badge-icon">Bovino CBT</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=PP5kG3ykBhg" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.1
+        </a>
+        <a href="https://youtu.be/O0Ag8ksN_I4?si=aTZN8WVwMa3V8ltz" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
+      </div>
+    </div>
+
+    <!-- CAPPELLO DEL PRETE -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Cappello del Prete di Vitello CBT</h3>
+        <div class="subtitle">Bovino CBT — cottura 16h sottovuoto</div>
+      </div>
+      <div class="card-body">
+        <p>Taglio di vitello ideale per CBT, con venatura di collagene che in cottura dona morbidezza e sapore. Rigenerazione semplice al forno e servizio con il suo succo.</p>
+        <table class="spec-table">
+          <tr><td>Confezione</td><td>2 sacchetti da ±2 kg</td></tr>
+          <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
+          <tr><td>Rigenerazione</td><td>20–25 min forno 200°C</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div class="badge-icons">
+          <span class="badge-icon gf">Senza Glutine</span>
+          <span class="badge-icon">Vitello</span>
         </div>
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.1
+        </a>
+        <a href="https://www.youtube.com/watch?v=PP5kG3ykBhg" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
@@ -809,28 +534,61 @@
     <div class="product-card">
       <div class="card-header">
         <h3>Mezzo Stinco di Vitello CBT</h3>
-        <div class="subtitle">Cottura +15h, ideale per 2 commensali</div>
+        <div class="subtitle">Bovino CBT — cottura +15h, porzione per 2</div>
       </div>
       <div class="card-body">
-        <p>Cucinato sottovuoto più di 15 ore. Mezzo stinco ideale per 2 persone. Croccante fuori, morbido dentro. Rigenera al forno 200–220°C per rosolare e rendere croccante la parte esterna.</p>
+        <p>Stinco di vitello cotto sottovuoto per oltre 15 ore. Il mezzo stinco è pensato per due commensali e si rigenera al forno per ottenere esterno rosolato e interno morbido.</p>
         <table class="spec-table">
           <tr><td>Confezione</td><td>4 sacchetti da 1–1,2 kg</td></tr>
-          <tr><td>Shelf life</td><td>24 mesi · 5 giorni in frigo dopo scon.</td></tr>
-          <tr><td>Rigenerazione</td><td>25–30 min forno 200°C, irrorare col succo</td></tr>
-          <tr><td>Glutine</td><td>Senza Glutine ✓</td></tr>
+          <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
+          <tr><td>Rigenerazione</td><td>25–30 min forno 200°C</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
           <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">CBT</span>
+          <span class="badge-icon">Vitello</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=OoB8-Y2ZHdg" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.1
+        </a>
+        <a href="https://www.youtube.com/watch?v=OoB8-Y2ZHdg" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
+      </div>
+    </div>
+
+    <!-- BRISKET DI ANGUS -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Brisket di Angus CBT</h3>
+        <div class="subtitle">Bovino CBT — punta di petto Angus</div>
+      </div>
+      <div class="card-body">
+        <p>Punta di petto di manzo Angus certificato, cotta sottovuoto per oltre 15 ore con tocco affumicato. Da tagliare sottile contro fibra e servire caldo o freddo.</p>
+        <table class="spec-table">
+          <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
+          <tr><td>Shelf life</td><td>24 mesi · 5 giorni in frigo dopo scon.</td></tr>
+          <tr><td>Servizio</td><td>Fettine sottili con succhi di cottura</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div class="badge-icons">
+          <span class="badge-icon gf">Senza Glutine</span>
+          <span class="badge-icon">Angus</span>
         </div>
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.1
+        </a>
+        <a href="https://youtu.be/LPQdA0dJWKU?si=9kadyKOfnUL07KZo" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
@@ -838,202 +596,282 @@
     <div class="product-card">
       <div class="card-header">
         <h3>Costina di Manzo CBT</h3>
-        <div class="subtitle">Biancostato cotto sottovuoto +15h</div>
+        <div class="subtitle">Beef Short-Ribs — biancostato +15h</div>
       </div>
       <div class="card-body">
-        <p>Biancostato di manzo cotto sottovuoto a bassa temperatura per più di 15 ore. Rigenera 15–20 min al forno 200°C. Serve irrorando col succo di cottura.</p>
+        <p>Biancostato di manzo cotto sottovuoto a bassa temperatura per oltre 15 ore. Prodotto pronto da rigenerare al forno e servire con il succo di cottura.</p>
         <table class="spec-table">
           <tr><td>Confezione</td><td>6 sacchetti da ±550 g</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>15–20 min forno 200°C</td></tr>
-          <tr><td>Glutine</td><td>Senza Glutine ✓</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
           <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">CBT</span>
+          <span class="badge-icon">Short-Ribs</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=dTjcuxTkyZ8&t=2s" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
-        </div>
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.1
+        </a>
+        <a href="https://www.youtube.com/watch?v=dTjcuxTkyZ8&t=2s" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
-    <!-- PULLED CHICKEN -->
+    <!-- GIRELLO DI VITELLO -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Pulled Chicken CBT</h3>
-        <div class="subtitle">Sovracoscia disossata, elaborata con carne e spezie</div>
+        <h3>Girello di Vitello CBT</h3>
+        <div class="subtitle">Bovino CBT — ideale vitello tonnato</div>
       </div>
       <div class="card-body">
-        <p>Sovracoscia di pollo disossata cotta CBT per 3 ore, elaborata con carne e spezie. Già pronto per essere sfilacciato. Ideale per tacos, fajitas, burger, panini, piadine. Rigenera 4 min microonde 800W.</p>
+        <p>Girello di vitello cotto a bassa temperatura per mantenere una consistenza rosata. Pensato per vitello tonnato, roast beef e servizio freddo affettato.</p>
         <table class="spec-table">
-          <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
+          <tr><td>Confezione</td><td>4 sacchetti da 1–1,6 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
-          <tr><td>Rigenerazione</td><td>4 min microonde 800W</td></tr>
-          <tr><td>Glutine</td><td>Senza Glutine ✓</td></tr>
+          <tr><td>Servizio</td><td>Affettatrice o coltello a lama liscia</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
           <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Pronto all'uso</span>
+          <span class="badge-icon">Vitello</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=Q4UMk4Vw0GM&t=1s" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.2
+        </a>
+        <a href="https://youtu.be/FM89TPpzLcs?si=xZi8BV_935MV0J8b" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
+      </div>
+    </div>
+
+    <!-- FONDO BRUNO -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Fondo Bruno / Demi-Glace</h3>
+        <div class="subtitle">Base premium con coda di manzo e verdure</div>
+      </div>
+      <div class="card-body">
+        <p>Fondo bruno premium con 40% di coda di manzo cotta per oltre 6 ore con verdure fresche. Da usare come fondo, demi-glace, base salsa o brodo diluito.</p>
+        <table class="spec-table">
+          <tr><td>Confezione</td><td>2 secchielli da 1,4 kg</td></tr>
+          <tr><td>Shelf life</td><td>24 mesi · 5 giorni in frigo dopo scon.</td></tr>
+          <tr><td>Preparazione</td><td>Riscaldare fino a ebollizione e rimescolare</td></tr>
+          <tr><td>Uso</td><td>Fondo bruno, salsa carne, brodo diluito</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div class="badge-icons">
+          <span class="badge-icon">Demi-Glace</span>
+          <span class="badge-icon">Base Salsa</span>
         </div>
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.2
+        </a>
+      </div>
+    </div>
+
+    <!-- GUANCIA DI MAIALE -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Guancia di Maiale CBT</h3>
+        <div class="subtitle">Suino CBT — cottura +9h sottovuoto</div>
+      </div>
+      <div class="card-body">
+        <p>Guance di maiale cotte sottovuoto a bassa temperatura per oltre 9 ore. Si possono servire intere oppure tagliate e scottate ad alta temperatura con salsa a piacere.</p>
+        <table class="spec-table">
+          <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
+          <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
+          <tr><td>Rigenerazione</td><td>5 min microonde 800W o 10 min bagnomaria</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div class="badge-icons">
+          <span class="badge-icon gf">Senza Glutine</span>
+          <span class="badge-icon">Suino CBT</span>
+        </div>
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.2
+        </a>
+        <a href="https://youtu.be/Fy5HkrqtSOg?si=vvhKU9bVtGZ7bwmD" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
     <!-- COSTINE DI MAIALE -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Costine di Maiale "Ribs" BBQ CBT</h3>
-        <div class="subtitle">Marinatura BBQ leggera e delicata</div>
+        <h3>Costine di Maiale Ribs CBT</h3>
+        <div class="subtitle">Suino CBT — varianti BBQ ed erbe aromatiche</div>
       </div>
       <div class="card-body">
-        <p>Costine di maiale cotte CBT per più di 12 ore, con leggera marinatura BBQ. 2 coste per sacchetto. Cuoci 15 min al forno a 180–200°C.</p>
-        <table class="spec-table">
-          <tr><td>Confezione</td><td>4 sacchetti da ±600 g (2 coste/sacch.)</td></tr>
-          <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
-          <tr><td>Rigenerazione</td><td>15 min forno 180–200°C</td></tr>
-          <tr><td>Glutine</td><td>Senza Glutine ✓</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">BBQ</span>
-        </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=MDygtskJrQA&t=10s" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- COSTINE ALLE ERBE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Costine di Maiale alle Erbe Aromatiche CBT</h3>
-        <div class="subtitle">Timo · Rosmarino · Origano</div>
-      </div>
-      <div class="card-body">
-        <p>Costine di maiale cotte CBT per più di 12 ore con aggiunta di timo, rosmarino e origano. Profumo intenso di erbe mediterranee, consistenza perfetta.</p>
+        <p>Costine di maiale cotte sottovuoto per oltre 12 ore, pronte per rigenerazione rapida al forno. La scheda copre le due varianti disponibili, pensate per presidiare sia una proposta BBQ sia una versione mediterranea alle erbe.</p>
         <table class="spec-table">
           <tr><td>Confezione</td><td>6 sacchetti da ±600 g</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>15 min forno 180–200°C</td></tr>
-          <tr><td>Glutine</td><td>Senza Glutine ✓</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
+        <div class="variant-box">
+          <strong>Gusti disponibili</strong>
+          <ul>
+            <li>Ribs BBQ — marinatura morbida e delicata</li>
+            <li>Ribs alle erbe aromatiche — timo, rosmarino e origano</li>
+          </ul>
+        </div>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
           <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Erbe Aromatiche</span>
+          <span class="badge-icon">Suino CBT</span>
+          <span class="badge-icon">2 Gusti</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=MDygtskJrQA&t=10s" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
-        </div>
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.2
+        </a>
+        <a href="https://www.youtube.com/watch?v=MDygtskJrQA" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
     <!-- PULLED PORK -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Pulled Pork CBT</h3>
-        <div class="subtitle">Capocollo di maiale cotto 12h, elaborato con spezie</div>
+        <h3>Pulled Pork — Capocollo di Maiale CBT</h3>
+        <div class="subtitle">Suino CBT — cotto 12h, pronto da sfilacciare</div>
       </div>
       <div class="card-body">
-        <p>Capocollo di maiale cotto CBT per 12 ore. Elaborato con carne e spezie. Pronto da sfilacciare per tacos, burger, panini, piadine. Rigenera 4 min microonde 800W.</p>
+        <p>Capocollo di maiale cotto a bassa temperatura per oltre 12 ore, elaborato con carne e spezie. Soluzione pronta per tacos, burger, panini, piadine e fajitas.</p>
         <table class="spec-table">
           <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>4 min microonde 800W</td></tr>
-          <tr><td>Glutine</td><td>Senza Glutine ✓</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
           <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Pronto all'uso</span>
+          <span class="badge-icon">Pulled</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=Q4UMk4Vw0GM" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
-        </div>
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.2
+        </a>
+        <a href="https://www.youtube.com/watch?v=Q4UMk4Vw0GM" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
-    <!-- MEZZO STINCO MAIALE -->
+    <!-- STINCO DI MAIALE -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Mezzo Stinco di Maiale CBT</h3>
-        <div class="subtitle">Cottura lenta, 12 porzioni per cartone</div>
+        <h3>Stinco di Maiale CBT</h3>
+        <div class="subtitle">Suino CBT — 2 mezzi stinchi per sacchetto</div>
       </div>
       <div class="card-body">
-        <p>Stinco di maiale cotto CBT a bassa temperatura. Ogni sacchetto è uno stinco intero diviso in due porzioni. Croccante fuori, morbidissimo dentro. Rigenerare 20 min forno 200°C.</p>
+        <p>Stinco di maiale cotto a bassa temperatura. Ogni sacchetto contiene uno stinco intero già diviso in due porzioni individuali, pratiche per servizio e reparto.</p>
         <table class="spec-table">
-          <tr><td>Confezione</td><td>6 sacchetti da ±700 g (conf. 2 pezzi)</td></tr>
-          <tr><td>Cartone</td><td>12 porzioni totali</td></tr>
+          <tr><td>Cartone</td><td>6 sacchetti · 12 porzioni totali</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
-          <tr><td>Glutine</td><td>Senza Glutine ✓</td></tr>
+          <tr><td>Rigenerazione</td><td>20 min forno 200°C</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
           <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">CBT</span>
+          <span class="badge-icon">2 Porzioni</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=fpJnZsQUhoM" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
-        </div>
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.2
+        </a>
+        <a href="https://www.youtube.com/watch?v=fpJnZsQUhoM" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
-    <!-- GYOZAS -->
+    <!-- PULLED CHICKEN -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Gyozas</h3>
-        <div class="subtitle">Etnico Cucina Fusion · 20g cadauno</div>
+        <h3>Pulled Chicken — Sovracoscia CBT</h3>
+        <div class="subtitle">Avicolo CBT — sovracoscia di pollo intera</div>
       </div>
       <div class="card-body">
-        <p>Gyoza con ripieno a scelta (Guancia di suino, Coda di manzo, Tori di pollo e verdure, Mazzancolle curry). Cottura 5 min vapore, poi doratura in padella senza scongelare.</p>
+        <p>Sovracoscia di pollo disossata cotta sottovuoto per oltre 3 ore, elaborata con carne e spezie. Pronta da sfilacciare per tacos, fajitas, burger e panini.</p>
         <table class="spec-table">
-          <tr><td>Confezione</td><td>3 vaschette da 40 pezzi</td></tr>
-          <tr><td>Peso pezzo</td><td>±20 g</td></tr>
-          <tr><td>Shelf life</td><td>24 mesi</td></tr>
-          <tr><td>Cottura</td><td>5 min vapore + doratura padella (senza scong.)</td></tr>
+          <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
+          <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
+          <tr><td>Rigenerazione</td><td>4 min microonde 800W</td></tr>
+          <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
-          <span class="badge-icon">Fusion</span>
-          <span class="badge-icon">Pronto 5 min</span>
+          <span class="badge-icon gf">Senza Glutine</span>
+          <span class="badge-icon">Avicolo</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=98pZszBNrW0" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.2
+        </a>
+        <a href="https://www.youtube.com/watch?v=Q4UMk4Vw0GM&t=1s" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
+      </div>
+    </div>
+
+    <!-- CROQUETAS PANKO -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Croquetas Panko al Baccalà</h3>
+        <div class="subtitle">Croquetas Panko — 35 g</div>
+      </div>
+      <div class="card-body">
+        <p>Croquetas con panatura panko croccante e ripieno al baccalà, pensate per frittura diretta da congelato. Linea tapas pronta per aperitivo, banco caldo e servizio food.</p>
+        <table class="spec-table">
+          <tr><td>Confezione</td><td>4 sacchetti da 1 kg</td></tr>
+          <tr><td>Peso pezzo</td><td>35 g</td></tr>
+          <tr><td>Shelf life</td><td>24 mesi</td></tr>
+          <tr><td>Frittura</td><td>Max 4–5 pezzi per litro d'olio a 180°C</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div class="badge-icons">
+          <span class="badge-icon">Panko</span>
+          <span class="badge-icon">Baccalà</span>
         </div>
+        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.3
+        </a>
+        <a href="https://www.youtube.com/watch?v=znMQcFcPNA0" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
@@ -1041,85 +879,128 @@
     <div class="product-card">
       <div class="card-header">
         <h3>Gua Baos</h3>
-        <div class="subtitle">Etnico Cucina Fusion · 32g cadauno</div>
+        <div class="subtitle">Cucina fusion — 32 g cadauno, vari gusti</div>
       </div>
       <div class="card-body">
-        <p>Panino morbido orientale con ripieno a scelta (Guancia di suino, Coda di manzo, Coscia d'anatra, Mazzancolle). Cottura 5 min vapore senza scongelare.</p>
+        <p>Panino morbido orientale con più varianti disponibili: mazzancolle curry e scorze di agrumi, guanciale di maiale CBT e kimchee, veggie con latte di tigre, coda di manzo hoisin, coscia d'anatra chili dolce.</p>
+        <div class="variant-box">
+          <strong>Gusti disponibili</strong>
+          <ul>
+            <li>Mazzancolle, curry e scorze di limone e d'arancia</li>
+            <li>Guanciale di maiale CBT e salsa kimchee</li>
+            <li>Verdura fresca e latte di tigre &quot;ceviche&quot; (veggie)</li>
+            <li>Coda di manzo CBT e salsa hoisin</li>
+            <li>Coscia d'anatra CBT e chili dolce</li>
+          </ul>
+        </div>
         <table class="spec-table">
+          <tr><td>Varianti</td><td>Mazzancolle · Maiale kimchee · Veggie ceviche · Manzo hoisin · Anatra chili</td></tr>
           <tr><td>Confezione</td><td>2 vaschette da 24 pezzi</td></tr>
-          <tr><td>Peso pezzo</td><td>±32 g</td></tr>
+          <tr><td>Cottura</td><td>5 min vapore senza scongelare</td></tr>
           <tr><td>Shelf life</td><td>24 mesi</td></tr>
-          <tr><td>Cottura</td><td>5 min vapore (senza scongelare)</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
           <span class="badge-icon">Fusion</span>
-          <span class="badge-icon">Pronto 5 min</span>
+          <span class="badge-icon">Multi-gusto</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=VwEfDm1cc3o" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
-        </div>
+        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.3
+        </a>
+        <a href="https://www.youtube.com/watch?v=VwEfDm1cc3o" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
-    <!-- CROQUETAS PANKO -->
+    <!-- GYOZAS -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Croquetas Panko</h3>
-        <div class="subtitle">Jamon Iberico Patanegra · Chorizo · 35g</div>
+        <h3>Gyozas</h3>
+        <div class="subtitle">Cucina fusion — 20 g cadauno, vari gusti</div>
       </div>
       <div class="card-body">
-        <p>Crocchette spagnole autentiche con panatura Panko croccante. Ripieni premium: Jamon Iberico Patanegra e Chorizo. Friggere 4–5 pz per litro d'olio, 180°C.</p>
+        <p>Gyozas surgelati con varianti selezionate per proposta fusion: manzo CBT e salsa hoisin, mazzancolle curry e scorze di agrumi, verdura fresca con latte di tigre in stile ceviche.</p>
+        <div class="variant-box">
+          <strong>Gusti disponibili</strong>
+          <ul>
+            <li>Manzo CBT e salsa hoisin</li>
+            <li>Mazzancolle, curry e scorze di limone e d'arancia</li>
+            <li>Verdura fresca e latte di tigre &quot;ceviche&quot; (veggie)</li>
+          </ul>
+        </div>
         <table class="spec-table">
-          <tr><td>Confezione</td><td>4 sacchetti da 1 kg</td></tr>
-          <tr><td>Peso pezzo</td><td>±35 g</td></tr>
+          <tr><td>Varianti</td><td>Manzo hoisin · Mazzancolle curry · Veggie ceviche</td></tr>
+          <tr><td>Confezione</td><td>3 vaschette da 40 pezzi</td></tr>
+          <tr><td>Cottura</td><td>5 min vapore + doratura in padella</td></tr>
           <tr><td>Shelf life</td><td>24 mesi</td></tr>
-          <tr><td>Frittura</td><td>Max 4–5 pz/l olio, 180°C</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
-          <span class="badge-icon">Panko</span>
-          <span class="badge-icon">Iberico</span>
+          <span class="badge-icon">Fusion</span>
+          <span class="badge-icon">Multi-gusto</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=znMQcFcPNA0" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
-        </div>
+        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.3
+        </a>
+        <a href="https://www.youtube.com/watch?v=98pZszBNrW0" target="_blank" class="btn-video">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          Video Ricetta
+        </a>
       </div>
     </div>
 
-    <!-- CROQUETAS -->
+    <!-- FAJITAS -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Croquetas</h3>
-        <div class="subtitle">Jamon · Funghi porcini · Baccalà · Nero di seppia · 35g</div>
+        <h3>Fajitas Tex-Mex</h3>
+        <div class="subtitle">Ricetta speziata pronta in 10 minuti</div>
       </div>
       <div class="card-body">
-        <p>Crocchette classiche con ampia scelta di ripieni gourmet. Friggere 4–5 pz per litro d'olio a 180°C fino a doratura. Riposi 2 min prima di servire.</p>
+        <p>Fajitas già pronte e farcite a mano con pulled chicken CBT e verdura fresca. Ricetta Tex-Mex speziata dal gusto autentico e pronta per forno senza scongelamento.</p>
         <table class="spec-table">
-          <tr><td>Confezione</td><td>4 sacchetti da 1 kg</td></tr>
-          <tr><td>Peso pezzo</td><td>±35 g</td></tr>
+          <tr><td>Confezione</td><td>4 vaschette da 24 fajitas</td></tr>
+          <tr><td>Cottura</td><td>10 min forno 180°C da surgelato</td></tr>
           <tr><td>Shelf life</td><td>24 mesi</td></tr>
-          <tr><td>Frittura</td><td>Max 4–5 pz/l olio, 180°C</td></tr>
+          <tr><td>Linea</td><td>Etnico Tex-Mex</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div class="badge-icons">
-          <span class="badge-icon">Gourmet</span>
-          <span class="badge-icon">Multi-ripieno</span>
+          <span class="badge-icon">Tex-Mex</span>
+          <span class="badge-icon">Pronto Forno</span>
         </div>
-        <div style="display:flex;gap:6px;flex-wrap:wrap;">
-          <a href="https://www.youtube.com/watch?v=7e762NSdpD0" target="_blank" class="btn-video">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            Video Ricetta
-          </a>
+        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn-page">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.3
+        </a>
+      </div>
+    </div>
+
+    <!-- MACINATO DI CINGHIALE -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Macinato di Cinghiale</h3>
+        <div class="subtitle">Articolo richiesto — scheda catalogo non disponibile</div>
+      </div>
+      <div class="card-body">
+        <p>Macinato di cinghiale inserito come articolo della selezione, da completare con scheda tecnica e collegamento catalogo quando il materiale sarà disponibile.</p>
+        <table class="spec-table">
+          <tr><td>Categoria</td><td>Selvaggina / macinato</td></tr>
+          <tr><td>Stato scheda</td><td>Da integrare</td></tr>
+          <tr><td>Link catalogo</td><td>Non disponibile nella cartella</td></tr>
+          <tr><td>Note</td><td>Inserito senza collegamento PDF</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div class="badge-icons">
+          <span class="badge-icon">No Link</span>
+          <span class="badge-icon">Da Catalogare</span>
         </div>
       </div>
     </div>
@@ -1162,118 +1043,96 @@
 
   <div class="product-grid">
 
-    <!-- FIOR DI ZUCCA VUOTI -->
+    <!-- FIORI DI ZUCCHINA -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Fior di Zucca Vuoti</h3>
-        <div class="subtitle">Prodotto fresco surgelato</div>
+        <h3>Fiori di Zucchina</h3>
+        <div class="subtitle">Vuoti · Mozzarella e pomodoro · Alici</div>
       </div>
       <div class="card-body">
-        <p>Fiori di zucca selezionati, colti al momento ideale di maturazione. Prodotto esclusivo, disponibile in edizione limitata. Ideali per fritture in tempura, ripieni, antipasti gourmet.</p>
+        <p>Linea di fiori di zucchina surgelati proposta in più varianti: vuoto per farciture personalizzate, ripieno mozzarella e pomodoro, ripieno con alici. Prodotto premium per antipasti, banco caldo e street food.</p>
+        <div class="variant-box">
+          <strong>Varianti disponibili</strong>
+          <ul>
+            <li>Vuoto</li>
+            <li>Mozzarella e pomodoro</li>
+            <li>Alici</li>
+          </ul>
+        </div>
         <table class="spec-table">
-          <tr><td>Confezione</td><td>4 sacchetti da 1 kg</td></tr>
-          <tr><td>Cartone</td><td>4 kg</td></tr>
+          <tr><td>Varianti</td><td>Vuoto · Mozzarella e pomodoro · Alici</td></tr>
           <tr><td>Conservazione</td><td>Unico conservante: il freddo</td></tr>
-          <tr><td>Utilizzo</td><td>Cuocere da congelato o trattare come da fresco</td></tr>
+          <tr><td>Utilizzo</td><td>Friggere o rigenerare da surgelato</td></tr>
+          <tr><td>Posizionamento</td><td>Antipasto premium / finger food</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
           <div class="badge-icons">
-            <span class="badge-icon gf">🌱 Vegan</span>
+            <span class="badge-icon">Multi-gusto</span>
             <span class="badge-icon">Edizione Limitata</span>
           </div>
           <a href="Agricola Tria.pdf#page=24" target="_blank" class="btn-page">
             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo
+            Catalogo p.24
           </a>
         </div>
       </div>
     </div>
 
-    <!-- FIOR DI ZUCCA RIPIENI -->
+    <!-- MIX RONDELLE -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Fior di Zucca Ripieni</h3>
-        <div class="subtitle">Prodotto fresco surgelato — Mozzarella e Alici</div>
+        <h3>Mix Rondelle di Verdure</h3>
+        <div class="subtitle">Carota · Zucchine · Cipolla rossa · Cavolfiori</div>
       </div>
       <div class="card-body">
-        <p>Fiori di zucca farciti con mozzarella e alici. Prodotto esclusivo e di alto posizionamento, pronto per frittura. Ideale come antipasto o street food premium.</p>
+        <p>Mix di verdure in formato rondella e bocconcino, pensato per frittura e servizio rapido. Abbina rondelle di carota e zucchine con cipolla rossa e cavolfiori per un assortimento colorato.</p>
         <table class="spec-table">
-          <tr><td>Ripieno</td><td>Mozzarella e Alici</td></tr>
-          <tr><td>Confezione</td><td>4 sacchetti da 1 kg</td></tr>
-          <tr><td>Cartone</td><td>4 kg</td></tr>
-          <tr><td>Conservazione</td><td>Unico conservante: il freddo</td></tr>
-          <tr><td>Utilizzo</td><td>Friggere da congelato</td></tr>
-        </table>
-      </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Edizione Limitata</span>
-            <span class="badge-icon">Pescato Fresco</span>
-          </div>
-          <a href="Agricola Tria.pdf#page=24" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- TRIS VERDURE IN TEMPURA -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Tris di Verdure in Tempura ✦</h3>
-        <div class="subtitle">Cavolfiori · Carciofi · Zucchine</div>
-      </div>
-      <div class="card-body">
-        <p>Tre verdure selezionate in pastella tempura leggera e croccante. Tecnica di frittura giapponese con pastella ad acqua frizzante ghiacciata per creare uno shock termico perfetto. Cottura diretta da surgelato.</p>
-        <table class="spec-table">
-          <tr><td>Ingredienti</td><td>Cavolfiori, Carciofi, Zucchine</td></tr>
-          <tr><td>Confezione</td><td>1 x 5 kg per cartone</td></tr>
-          <tr><td>Pastella</td><td>Tempura (tecnica giapponese)</td></tr>
+          <tr><td>Ingredienti</td><td>Carota, zucchine, cipolla rossa, cavolfiori</td></tr>
+          <tr><td>Formato</td><td>Mix verdure surgelate</td></tr>
           <tr><td>Utilizzo</td><td>Friggere direttamente da surgelato</td></tr>
+          <tr><td>Servizio</td><td>Aperitivo, buffet, contorno caldo</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
           <div class="badge-icons">
-            <span class="badge-icon gf">🌱 Vegan</span>
-            <span class="badge-icon">Tempura Leggera</span>
+            <span class="badge-icon gf">Vegan</span>
+            <span class="badge-icon">Mix Verdure</span>
           </div>
-          <a href="Agricola Tria.pdf#page=38" target="_blank" class="btn-page">
+          <a href="Agricola Tria.pdf#page=37" target="_blank" class="btn-page">
             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.38
+            Catalogo p.37
           </a>
         </div>
       </div>
     </div>
 
-    <!-- STICK DI ORTAGGI IN TEMPURA -->
+    <!-- MIX STICK -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Stick di Ortaggi Misti in Tempura ✦</h3>
-        <div class="subtitle">Zucchine · Melanzane · Peperoni</div>
+        <h3>Mix Stick e Frittelline</h3>
+        <div class="subtitle">Zucchine · Melanzane · Cavolfiore · Zucchine e menta</div>
       </div>
       <div class="card-body">
-        <p>Stick di ortaggi misti pastellati in tempura croccante. Formato versatile per aperitivi, buffet, finger food e contorni. Elevata resa in cottura e aspetto premium.</p>
+        <p>Mix composto da stick di zucchine, melanzane e cavolfiore, completato da frittelline zucchine e menta. Soluzione pronta per arricchire il banco fritto con più consistenze nello stesso assortimento.</p>
         <table class="spec-table">
-          <tr><td>Ingredienti</td><td>Zucchine, Melanzane, Peperoni</td></tr>
-          <tr><td>Confezione</td><td>1 x 5 kg per cartone</td></tr>
-          <tr><td>Pastella</td><td>Tempura (tecnica giapponese)</td></tr>
+          <tr><td>Ingredienti</td><td>Zucchine, melanzane, cavolfiore, zucchine e menta</td></tr>
+          <tr><td>Formato</td><td>Stick + frittelline</td></tr>
           <tr><td>Utilizzo</td><td>Friggere direttamente da surgelato</td></tr>
+          <tr><td>Servizio</td><td>Finger food, aperitivo, reparto gastronomia</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
           <div class="badge-icons">
-            <span class="badge-icon gf">🌱 Vegan</span>
-            <span class="badge-icon">Tempura Leggera</span>
+            <span class="badge-icon gf">Vegan</span>
+            <span class="badge-icon">Zucchine e Menta</span>
           </div>
-          <a href="Agricola Tria.pdf#page=39" target="_blank" class="btn-page">
+          <a href="Agricola Tria.pdf#page=36" target="_blank" class="btn-page">
             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.39
+            Catalogo p.36
           </a>
         </div>
       </div>
@@ -1318,32 +1177,121 @@
 
   <div class="product-grid">
 
-    <!-- MOZZARELLA IN CARROZZA -->
+    <!-- OLIVE ALL'ASCOLANA -->
     <div class="product-card">
       <div class="card-header">
-        <h3>Mozzarella in Carrozza</h3>
-        <div class="subtitle">gr 120/140</div>
+        <h3>Olive all'Ascolana</h3>
+        <div class="subtitle">Specialità carne — linea standard</div>
       </div>
       <div class="card-body">
-        <p>La grande classica della tradizione italiana, prodotta con mozzarella fresca e panatura dorata croccante. Ingredienti a Km 0, nessun additivo chimico. Ideale come antipasto, street food o per il banco rosticceria GDO.</p>
+        <p>Olive verdi denocciolate, riempite con un mix di carni cucinate con maestria, poi panate e surgelate. Prodotto simbolo del territorio piceno e proposta centrale per il fritto misto.</p>
         <table class="spec-table">
-          <tr><td>Peso pezzo</td><td>120–140 g</td></tr>
-          <tr><td>Confezione</td><td>1 x 6 pezzi</td></tr>
-          <tr><td>Ingredienti</td><td>Mozzarella, uova (allevamento a terra), panatura</td></tr>
-          <tr><td>Additivi</td><td>Nessuno — NO OGM</td></tr>
-          <tr><td>Cert.</td><td>BRC Food International</td></tr>
+          <tr><td>Peso pezzo</td><td>19–20 g · 50/52 pezzi/kg</td></tr>
+          <tr><td>Confezioni</td><td>2,5 kg · 1 kg · 500 g · 250 g pronto forno</td></tr>
+          <tr><td>Cottura</td><td>Friggitrice 165°C per 4/5 min</td></tr>
+          <tr><td>Codice</td><td>0116</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
           <div class="badge-icons">
-            <span class="badge-icon">NO OGM</span>
             <span class="badge-icon">BRC</span>
             <span class="badge-icon">Km 0</span>
+            <span class="badge-icon">Pronto Forno</span>
           </div>
-          <a href="Bachetti Food.pdf#page=19" target="_blank" class="btn-page">
+          <a href="Bachetti Food.pdf#page=12" target="_blank" class="btn-page">
             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.19
+            Catalogo p.12
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOZZARELLINE PANATE -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Mozzarelline Panate</h3>
+        <div class="subtitle">Vegetariana — cuore filante</div>
+      </div>
+      <div class="card-body">
+        <p>Ciliegine di mozzarella panate e surgelate, croccanti fuori e filanti dentro. Formato adatto per aperitivi, buffet, banco caldo e servizio snack.</p>
+        <table class="spec-table">
+          <tr><td>Peso pezzo</td><td>18–19 g · 52/55 pezzi/kg</td></tr>
+          <tr><td>Confezioni</td><td>2,5 kg · 1 kg · 500 g · 250 g pronto forno</td></tr>
+          <tr><td>Cottura</td><td>Friggitrice 165°C per 3/4 min</td></tr>
+          <tr><td>Codice</td><td>0124</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+          <div class="badge-icons">
+            <span class="badge-icon">Vegetariana</span>
+            <span class="badge-icon">Pronto Forno</span>
+            <span class="badge-icon">BRC</span>
+          </div>
+          <a href="Bachetti Food.pdf#page=14" target="_blank" class="btn-page">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+            Catalogo p.14
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARANCINI ALLA SICILIANA -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Arancini alla Siciliana</h3>
+        <div class="subtitle">Risotto allo zafferano, ragù e piselli</div>
+      </div>
+      <div class="card-body">
+        <p>Arancino conico con risotto allo zafferano e cuore di ragù con piselli, panato e surgelato. Prodotto da banco caldo e street food con forte riconoscibilità.</p>
+        <table class="spec-table">
+          <tr><td>Peso pezzo</td><td>30 / 60 / 120 g</td></tr>
+          <tr><td>Confezione</td><td>2 x 2,5 kg · cartone 5 kg</td></tr>
+          <tr><td>Cottura</td><td>Friggitrice 165°C per 6/7 min</td></tr>
+          <tr><td>Codice</td><td>0165 · anche pronto forno</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+          <div class="badge-icons">
+            <span class="badge-icon">Pronto Forno</span>
+            <span class="badge-icon">Street Food</span>
+            <span class="badge-icon">BRC</span>
+          </div>
+          <a href="Bachetti Food.pdf#page=22" target="_blank" class="btn-page">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+            Catalogo p.22
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOCCONCINI DI CAVOLO VIOLA -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Bocconcini di Cavolo Viola</h3>
+        <div class="subtitle">Vegetariana — cavolo verza viola</div>
+      </div>
+      <div class="card-body">
+        <p>Bocconcini con cavolo verza viola, cipolla, sedano e carota, avvolti da panatura colorata con rapa rossa essiccata. Proposta vegetariana dal colore distintivo.</p>
+        <table class="spec-table">
+          <tr><td>Peso pezzo</td><td>28–30 g · 33/55 pezzi/kg</td></tr>
+          <tr><td>Confezioni</td><td>2,5 kg · 250 g pronto forno</td></tr>
+          <tr><td>Cottura</td><td>Friggitrice 165°C per 5/6 min</td></tr>
+          <tr><td>Codice</td><td>0281</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+          <div class="badge-icons">
+            <span class="badge-icon">Vegetariana</span>
+            <span class="badge-icon">Pronto Forno</span>
+            <span class="badge-icon">BRC</span>
+          </div>
+          <a href="Bachetti Food.pdf#page=25" target="_blank" class="btn-page">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+            Catalogo p.25
           </a>
         </div>
       </div>
@@ -1353,22 +1301,21 @@
     <div class="product-card">
       <div class="card-header">
         <h3>Formaggio Fritto</h3>
-        <div class="subtitle">gr 40/50</div>
+        <div class="subtitle">Vegetariana — gr 40/50</div>
       </div>
       <div class="card-body">
-        <p>Bocconcini di formaggio selezionato in panatura croccante. Formato monoporzione ideale per aperitivi, snack bar, reparto fritto GDO. Alta resa, cottura uniforme, nessun additivo.</p>
+        <p>Rettangoli di formaggio di latte vaccino e ovino abruzzese, panati e surgelati. Specialità vegetariana dal cuore filante, ideale per fritto misto e aperitivo.</p>
         <table class="spec-table">
-          <tr><td>Peso pezzo</td><td>40–50 g</td></tr>
-          <tr><td>Confezione</td><td>2 x 2,5 kg</td></tr>
-          <tr><td>Cartone</td><td>5 kg totali</td></tr>
-          <tr><td>Additivi</td><td>Nessuno — NO OGM</td></tr>
-          <tr><td>Cert.</td><td>BRC Food International</td></tr>
+          <tr><td>Peso pezzo</td><td>40–50 g · 20/25 pezzi/kg</td></tr>
+          <tr><td>Confezione</td><td>2 x 2,5 kg · cartone 5 kg</td></tr>
+          <tr><td>Cottura</td><td>Friggitrice 165°C per 2/3 min</td></tr>
+          <tr><td>Codice</td><td>0134</td></tr>
         </table>
       </div>
       <div class="card-footer">
         <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
           <div class="badge-icons">
-            <span class="badge-icon">NO OGM</span>
+            <span class="badge-icon">Vegetariana</span>
             <span class="badge-icon">BRC</span>
             <span class="badge-icon">Monoporzione</span>
           </div>
@@ -1376,6 +1323,29 @@
             <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
             Catalogo p.20
           </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CACIO E OVO -->
+    <div class="product-card">
+      <div class="card-header">
+        <h3>Cacio e Ovo</h3>
+        <div class="subtitle">Articolo richiesto — scheda catalogo non disponibile</div>
+      </div>
+      <div class="card-body">
+        <p>Cacio e ovo inserito nella selezione Bachetti come articolo richiesto, da completare con scheda tecnica e collegamento catalogo quando il materiale sarà disponibile.</p>
+        <table class="spec-table">
+          <tr><td>Categoria</td><td>Specialità fritta</td></tr>
+          <tr><td>Stato scheda</td><td>Da integrare</td></tr>
+          <tr><td>Link catalogo</td><td>Non disponibile nella cartella</td></tr>
+          <tr><td>Note</td><td>Inserito senza collegamento PDF</td></tr>
+        </table>
+      </div>
+      <div class="card-footer">
+        <div class="badge-icons">
+          <span class="badge-icon">No Link</span>
+          <span class="badge-icon">Da Catalogare</span>
         </div>
       </div>
     </div>
@@ -1517,6 +1487,55 @@
   </div>
   <p style="margin-top:20px;font-size:0.72rem;color:#5a5040;">© 2026 LGI Global Food Service — Documento riservato per uso commerciale GDO</p>
 </footer>
+
+<script>
+  (function () {
+    function scrollToCurrentHash(behavior) {
+      if (!location.hash) return;
+      var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (!target) return;
+      target.scrollIntoView({ block: 'start', behavior: behavior || 'auto' });
+    }
+
+    scrollToCurrentHash('auto');
+    window.setTimeout(function () { scrollToCurrentHash('auto'); }, 100);
+    window.setTimeout(function () { scrollToCurrentHash('auto'); }, 500);
+
+    window.addEventListener('load', function () {
+      window.setTimeout(function () { scrollToCurrentHash('auto'); }, 0);
+    });
+
+    window.addEventListener('hashchange', function () {
+      scrollToCurrentHash('smooth');
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        var hash = link.getAttribute('href');
+        var target = document.getElementById(hash.slice(1));
+        if (!target) return;
+        event.preventDefault();
+        history.pushState(null, '', hash);
+        scrollToCurrentHash('smooth');
+      });
+    });
+
+    var isLocalPreview = location.hostname === '127.0.0.1' || location.hostname === 'localhost';
+    if (!isLocalPreview) return;
+
+    document.querySelectorAll('.btn-page, .btn-catalog, .btn-website').forEach(function (link) {
+      link.setAttribute('target', '_self');
+    });
+
+    // Keep video previews reliable in the in-app browser without altering PDF/catalog links.
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest('a.btn-video[target="_blank"]');
+      if (!link) return;
+      event.preventDefault();
+      window.location.href = link.href;
+    });
+  })();
+</script>
 
 </body>
 </html>
