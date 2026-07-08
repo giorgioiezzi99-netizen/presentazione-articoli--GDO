@@ -3,497 +3,413 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selezione Prodotti GDO – LGI Global Food Service</title>
+<meta name="description" content="Selezione esclusiva di prodotti premium per la Grande Distribuzione — LGI Global Food Service, Collezione 2026.">
+<title>Selezione Prodotti GDO 2026 – LGI Global Food Service</title>
 <style>
   :root {
-    --gold: #c9a84c;
-    --gold-light: #e8c87a;
-    --dark: #1a1a1a;
-    --dark2: #242424;
-    --dark3: #2e2e2e;
-    --text: #f0ece4;
-    --text-muted: #a89880;
-    --accent: #8b1a1a;
-    --green: #2d6a2d;
-    --border: rgba(201,168,76,0.25);
+    --ink: #1c1a17;
+    --ink-soft: #55504a;
+    --ink-faint: #8a8378;
+    --paper: #faf8f4;
+    --paper-2: #f3efe7;
+    --card: #ffffff;
+    --gold: #a8853b;
+    --gold-deep: #8a6c2c;
+    --gold-pale: #e9dfc8;
+    --bordeaux: #7a2222;
+    --night: #12100d;
+    --night-2: #1b1813;
+    --line: #e5ddcd;
+    --serif: "Didot", "Bodoni 72", "Playfair Display", "Times New Roman", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Inter, Arial, sans-serif;
   }
   * { margin:0; padding:0; box-sizing:border-box; }
   html { scroll-behavior: smooth; }
   body {
-    background: var(--dark);
-    color: var(--text);
-    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
     font-size: 15px;
-    line-height: 1.6;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
+  ::selection { background: var(--gold-pale); }
 
-  /* ─── HEADER ─── */
-  header {
-    background: var(--dark2);
-    border-bottom: 2px solid var(--gold);
-    padding: 18px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  /* ───────────── STICKY NAV ───────────── */
+  .topbar {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(18,16,13,0.92);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(168,133,59,0.35);
   }
-  .logo-area { display: flex; align-items: center; gap: 16px; }
-  .logo-area img { height: 52px; object-fit: contain; border-radius: 4px; }
-  .logo-text h1 { font-size: 1.1rem; color: var(--gold); letter-spacing: 0.05em; font-weight: 700; }
-  .logo-text p { font-size: 0.75rem; color: var(--text-muted); }
-  .header-contact { text-align: right; font-size: 0.8rem; color: var(--text-muted); line-height: 1.8; }
-  .header-contact a { color: var(--gold); text-decoration: none; }
-  .header-contact a:hover { text-decoration: underline; }
+  .topbar-inner {
+    max-width: 1180px; margin: 0 auto; padding: 0 28px;
+    display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    height: 62px;
+  }
+  .topbar-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .topbar-logo img { height: 36px; border-radius: 3px; }
+  .topbar-logo span {
+    font-family: var(--serif); font-size: 1.02rem; color: #f0e8d8; letter-spacing: 0.04em; white-space: nowrap;
+  }
+  .topnav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  .topnav::-webkit-scrollbar { display: none; }
+  .topnav a {
+    text-decoration: none; color: #b8ac96; white-space: nowrap;
+    font-size: 0.74rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    padding: 8px 13px; border-bottom: 2px solid transparent; transition: color .25s, border-color .25s;
+  }
+  .topnav a:hover { color: #f0e8d8; }
+  .topnav a.active { color: #e8c87a; border-bottom-color: var(--gold); }
 
-  /* ─── HERO ─── */
+  /* ───────────── HERO (DARK COVER) ───────────── */
   .hero {
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1208 50%, #0f0f0f 100%);
-    border-bottom: 1px solid var(--border);
-    padding: 56px 32px 48px;
-    text-align: center;
+    position: relative;
+    background: var(--night);
+    color: #f2ecdd;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center; overflow: hidden;
+    padding: 64px 24px 44px;
   }
-  .hero h2 {
-    font-size: 2rem;
-    color: var(--gold);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 12px;
+  .hero-content { position: relative; max-width: 780px; }
+  .hero-eyebrow {
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.42em; text-transform: uppercase;
+    color: #c9a84c; margin-bottom: 26px;
   }
-  .hero p {
-    max-width: 640px;
-    margin: 0 auto;
-    color: var(--text-muted);
-    font-size: 0.95rem;
+  .hero-logo { height: 84px; border-radius: 6px; margin-bottom: 30px; box-shadow: 0 8px 40px rgba(0,0,0,0.6); }
+  .hero h1 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    line-height: 1.08; letter-spacing: 0.01em;
+    color: #f7f2e5; margin-bottom: 22px;
   }
-  .hero-badge {
-    display: inline-block;
-    margin-top: 20px;
-    background: rgba(201,168,76,0.12);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 6px 18px;
-    font-size: 0.78rem;
-    color: var(--gold-light);
-    letter-spacing: 0.06em;
+  .hero h1 em { font-style: italic; color: #e8c87a; }
+  .hero-sub {
+    max-width: 560px; margin: 0 auto;
+    color: #c8bda5; font-size: 1.0rem; font-weight: 300; line-height: 1.75;
   }
+  .hero-rule {
+    width: 64px; height: 1px; background: var(--gold); margin: 28px auto 6px;
+    position: relative;
+  }
+  .hero-rule::after {
+    content: "✦"; position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
+    color: var(--gold); font-size: 0.8rem; background: transparent; padding: 0 10px;
+  }
+  /* ───────────── BRAND SECTIONS ───────────── */
+  .brand-section { max-width: 1180px; margin: 0 auto; padding: 52px 28px 22px; scroll-margin-top: 70px; }
+  .brand-head { display: flex; align-items: baseline; gap: 22px; margin-bottom: 6px; }
+  .brand-index {
+    font-family: var(--serif); font-size: 1.05rem; color: var(--gold);
+    letter-spacing: 0.08em; white-space: nowrap;
+  }
+  .brand-head h2 {
+    font-family: var(--serif); font-weight: 400;
+    font-size: clamp(1.9rem, 3.6vw, 2.7rem); line-height: 1.15; color: var(--ink);
+  }
+  .brand-tagline { color: var(--ink-faint); font-size: 0.92rem; margin: 6px 0 20px; padding-left: 52px; }
+  .brand-banner {
+    display: grid; grid-template-columns: 1.15fr 1fr; gap: 0;
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+    background: var(--card); margin-bottom: 24px;
+    box-shadow: 0 18px 50px -30px rgba(28,26,23,0.25);
+  }
+  .brand-banner.flip { grid-template-columns: 1fr 1.15fr; }
+  .brand-banner-img { min-height: 190px; background-size: cover; background-position: center; }
+  .brand-banner-body { padding: 22px 28px; display: flex; flex-direction: column; justify-content: center; }
+  .brand-banner-body p { color: var(--ink-soft); font-size: 0.87rem; line-height: 1.65; }
+  .brand-banner-body p strong { color: var(--ink); font-weight: 600; }
+  .brand-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+  .chip {
+    font-size: 0.66rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--gold-deep); background: rgba(168,133,59,0.08);
+    border: 1px solid rgba(168,133,59,0.3); border-radius: 999px; padding: 4px 12px;
+  }
+  .chip.green { color: #3e6b3e; border-color: rgba(62,107,62,0.35); background: rgba(62,107,62,0.07); }
 
-  /* ─── NAV PILLS ─── */
-  .nav-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    padding: 24px 32px;
-    background: var(--dark2);
-    border-bottom: 1px solid var(--border);
-  }
-  .nav-pills a {
-    text-decoration: none;
-    background: var(--dark3);
-    color: var(--text-muted);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    padding: 7px 18px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    transition: all 0.2s;
-  }
-  .nav-pills a:hover {
-    background: var(--gold);
-    color: var(--dark);
-    border-color: var(--gold);
-  }
-
-  /* ─── BRAND SECTION ─── */
-  .brand-section {
-    max-width: 1100px;
-    margin: 48px auto;
-    padding: 0 24px;
-    scroll-margin-top: 110px;
-  }
-  .brand-header {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 12px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid var(--gold);
-  }
-  .brand-logo-badge {
-    background: var(--dark3);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 18px;
-    font-size: 1.2rem;
-    font-weight: 800;
-    color: var(--gold);
-    letter-spacing: 0.04em;
-    white-space: nowrap;
-    min-width: 130px;
-    text-align: center;
-  }
-  .brand-info h2 {
-    font-size: 1.35rem;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .brand-info p {
-    font-size: 0.82rem;
-    color: var(--text-muted);
-  }
-  .brand-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-    margin-bottom: 20px;
-    margin-top: 8px;
-  }
-  .tag {
-    display: inline-block;
-    background: rgba(201,168,76,0.1);
-    border: 1px solid rgba(201,168,76,0.3);
-    border-radius: 12px;
-    padding: 3px 11px;
-    font-size: 0.72rem;
-    color: var(--gold-light);
-    letter-spacing: 0.04em;
-  }
-  .tag.green {
-    background: rgba(45,106,45,0.2);
-    border-color: rgba(45,106,45,0.4);
-    color: #7ec87e;
-  }
-  .brand-desc {
-    background: var(--dark3);
-    border-left: 3px solid var(--gold);
-    border-radius: 0 8px 8px 0;
-    padding: 14px 18px;
-    font-size: 0.88rem;
-    color: var(--text-muted);
-    margin-bottom: 28px;
-    line-height: 1.7;
-  }
-
-  /* ─── PRODUCT GRID ─── */
+  /* ───────────── PRODUCT GRID / CARDS ───────────── */
   .product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    margin-bottom: 12px;
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(268px, 1fr));
+    gap: 16px; margin-bottom: 8px;
   }
   .product-card {
-    background: var(--dark2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    overflow: hidden; display: flex; flex-direction: column;
+    transition: transform .3s ease, box-shadow .3s ease;
   }
   .product-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 28px rgba(201,168,76,0.12);
+    transform: translateY(-4px);
+    box-shadow: 0 24px 55px -24px rgba(28,26,23,0.35);
   }
-  .card-header {
-    background: linear-gradient(135deg, var(--dark3), #1e1a10);
-    padding: 16px 18px 12px;
-    border-bottom: 1px solid var(--border);
+  .card-photo { position: relative; aspect-ratio: 16/8; overflow: hidden; background: #0d0c0a; }
+  .card-photo img {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+    transition: transform .8s cubic-bezier(.2,.6,.2,1);
   }
-  .card-header h3 {
-    font-size: 1rem;
-    color: var(--gold);
-    margin-bottom: 4px;
-    line-height: 1.3;
+  .card-photo.contain { background: var(--paper-2); }
+  .card-photo.contain img { object-fit: contain; padding: 12px; }
+  .product-card:hover .card-photo img { transform: scale(1.045); }
+  .card-photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 62%, rgba(0,0,0,0.42) 100%);
+    pointer-events: none;
   }
-  .card-header .subtitle {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    font-style: italic;
+  .card-photo.contain::after { display: none; }
+  .card-flag {
+    position: absolute; top: 12px; left: 12px; z-index: 2;
+    font-size: 0.62rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+    color: #f5eeda; background: rgba(18,16,13,0.72);
+    border: 1px solid rgba(201,168,76,0.5); border-radius: 999px; padding: 4px 11px;
+    -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
   }
-  .card-body { padding: 14px 18px; }
-  .card-body p {
-    font-size: 0.83rem;
-    color: #c8c0b0;
-    margin-bottom: 12px;
-    line-height: 1.6;
+  .card-photo.contain .card-flag { color: var(--gold-deep); background: rgba(255,255,255,0.85); border-color: rgba(168,133,59,0.4); }
+  .card-body { padding: 15px 17px 4px; flex: 1; }
+  .card-body h3 {
+    font-family: var(--serif); font-weight: 500; font-size: 1.1rem; line-height: 1.22;
+    color: var(--ink); margin-bottom: 2px;
   }
-  .spec-table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
-  .spec-table tr { border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .spec-table tr:last-child { border-bottom: none; }
-  .spec-table td { padding: 5px 4px; }
-  .spec-table td:first-child { color: var(--text-muted); width: 42%; }
-  .spec-table td:last-child { color: var(--text); font-weight: 600; }
-  .variant-box {
-    background: rgba(201,168,76,0.08);
-    border: 1px solid rgba(201,168,76,0.22);
-    border-radius: 6px;
-    padding: 10px 12px;
-    margin: 0 0 12px;
+  .card-kicker {
+    font-size: 0.63rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold-deep); margin-bottom: 8px;
   }
-  .variant-box strong {
-    display: block;
-    color: var(--gold-light);
-    font-size: 0.74rem;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    margin-bottom: 6px;
+  .card-body > p { font-size: 0.79rem; color: var(--ink-soft); margin-bottom: 10px; line-height: 1.55; }
+  .spec { width: 100%; border-collapse: collapse; font-size: 0.74rem; margin-bottom: 10px; }
+  .spec tr { border-top: 1px solid #f0ebdf; }
+  .spec tr:first-child { border-top: 1px solid var(--line); }
+  .spec td { padding: 4px 2px; vertical-align: top; }
+  .spec td:first-child {
+    color: var(--ink-faint); width: 36%;
+    font-size: 0.6rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+    padding-top: 6px;
   }
-  .variant-box ul {
-    list-style: none;
-    display: grid;
-    gap: 5px;
+  .spec td:last-child { color: var(--ink); font-weight: 500; }
+  .variants {
+    border: 1px solid var(--gold-pale); background: rgba(233,223,200,0.22);
+    border-radius: 8px; padding: 9px 12px; margin-bottom: 10px;
   }
-  .variant-box li {
-    border-left: 2px solid rgba(201,168,76,0.35);
-    padding-left: 8px;
-    font-size: 0.78rem;
-    color: #d7cfbf;
-    line-height: 1.4;
+  .variants strong {
+    display: block; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--gold-deep); margin-bottom: 5px;
   }
-  .card-footer {
-    padding: 12px 18px;
-    border-top: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    flex-wrap: wrap;
+  .variants ul { list-style: none; display: grid; gap: 3px; }
+  .variants li {
+    font-size: 0.74rem; color: var(--ink-soft); padding-left: 14px; position: relative;
   }
-  .badge-icons { display: flex; gap: 6px; flex-wrap: wrap; }
-  .badge-icon {
-    background: rgba(201,168,76,0.1);
-    border: 1px solid rgba(201,168,76,0.2);
-    border-radius: 4px;
-    padding: 2px 8px;
-    font-size: 0.68rem;
-    color: var(--gold-light);
+  .variants li::before { content: "✦"; position: absolute; left: 0; top: 0; color: var(--gold); font-size: 0.55rem; line-height: 2.1; }
+  .card-actions {
+    padding: 10px 17px 14px; display: flex; flex-wrap: wrap; gap: 7px; align-items: center;
+    border-top: 1px solid #f0ebdf;
   }
-  .badge-icon.gf {
-    background: rgba(45,106,45,0.15);
-    border-color: rgba(45,106,45,0.35);
-    color: #7ec87e;
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    text-decoration: none; border-radius: 7px; padding: 6px 11px;
+    font-size: 0.68rem; font-weight: 700; letter-spacing: 0.05em;
+    transition: all .22s; line-height: 1.35;
   }
-  .btn-video {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    padding: 6px 13px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    transition: background 0.2s;
-  }
-  .btn-video:hover { background: #a52020; }
-  .btn-video svg { width: 13px; height: 13px; fill: #fff; }
-  .btn-page {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    background: rgba(201,168,76,0.10);
-    border: 1px solid rgba(201,168,76,0.35);
-    color: var(--gold-light);
-    text-decoration: none;
-    border-radius: 6px;
-    padding: 6px 12px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    transition: all 0.2s;
-  }
-  .btn-page:hover { background: rgba(201,168,76,0.25); }
-  .btn-page svg { width: 12px; height: 12px; fill: currentColor; }
+  .btn svg { width: 13px; height: 13px; fill: currentColor; flex: none; }
+  .btn-doc { color: var(--ink-soft); border: 1px solid var(--line); background: transparent; }
+  .btn-doc:hover { border-color: var(--gold); color: var(--gold-deep); background: rgba(168,133,59,0.06); }
+  .btn-video { color: #fff; background: var(--bordeaux); border: 1px solid var(--bordeaux); }
+  .btn-video:hover { background: #641a1a; }
 
-  /* ─── CATALOG BUTTON ─── */
-  .btn-catalog {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(201,168,76,0.12);
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    text-decoration: none;
-    border-radius: 8px;
-    padding: 9px 18px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    margin-top: 16px;
-    transition: all 0.2s;
-  }
-  .btn-catalog:hover { background: var(--gold); color: var(--dark); }
-  .btn-catalog svg { width: 15px; height: 15px; fill: currentColor; }
+  /* section footer buttons */
+  .brand-links { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 4px; }
 
-
-  /* ─── WEBSITE BUTTON ─── */
-  .btn-website {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: transparent;
-    border: 1.5px solid rgba(201,168,76,0.4);
-    color: var(--gold-light);
-    text-decoration: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    transition: all 0.2s;
-    margin-left: 10px;
-  }
-  .btn-website:hover { background: rgba(201,168,76,0.12); border-color: var(--gold); }
-  .btn-website svg { width: 15px; height: 15px; fill: currentColor; }
-  /* ─── GLOSSARY ─── */
-  .glossary {
-    max-width: 1100px;
-    margin: 0 auto 48px;
-    padding: 0 24px;
-  }
+  /* ───────────── GLOSSARY ───────────── */
+  .glossary { max-width: 1180px; margin: 44px auto 0; padding: 0 28px; }
   .glossary-box {
-    background: var(--dark2);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px 24px;
-    display: flex;
-    gap: 32px;
-    flex-wrap: wrap;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 26px 30px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px;
   }
   .glossary-box h3 {
-    width: 100%;
-    color: var(--gold);
-    font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    grid-column: 1 / -1; font-family: var(--serif); font-weight: 500;
+    font-size: 1.2rem; color: var(--ink);
+    padding-bottom: 12px; border-bottom: 1px solid var(--line);
   }
-  .glossary-item { flex: 1; min-width: 200px; }
-  .glossary-item strong { color: var(--gold-light); display: block; margin-bottom: 4px; font-size: 0.88rem; }
-  .glossary-item p { font-size: 0.8rem; color: var(--text-muted); }
+  .glossary-item strong {
+    display: block; color: var(--gold-deep); font-size: 0.86rem; margin-bottom: 5px;
+    letter-spacing: 0.04em;
+  }
+  .glossary-item p { font-size: 0.8rem; color: var(--ink-soft); }
+  @media (max-width: 860px) { .glossary-box { grid-template-columns: 1fr; } }
+  .btn-catalog {
+    display: inline-flex; align-items: center; gap: 9px;
+    text-decoration: none; border-radius: 10px; padding: 12px 24px;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: #f5eeda; background: var(--night-2); border: 1px solid var(--night-2);
+    transition: all .25s;
+  }
+  .btn-catalog:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
+  .btn-catalog svg { width: 15px; height: 15px; fill: currentColor; }
+  .btn-site {
+    display: inline-flex; align-items: center; gap: 8px;
+    text-decoration: none; border-radius: 10px; padding: 12px 22px;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold-deep); border: 1px solid rgba(168,133,59,0.45); background: transparent;
+    transition: all .25s;
+  }
+  .btn-site:hover { background: rgba(168,133,59,0.09); border-color: var(--gold); }
+  .btn-site svg { width: 15px; height: 15px; fill: currentColor; }
 
-  /* ─── FOOTER ─── */
+  .divider {
+    max-width: 1180px; margin: 26px auto 0; padding: 0 28px;
+    display: flex; align-items: center; gap: 16px; border: none;
+  }
+  .divider::before, .divider::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+  .divider span { color: var(--gold); font-size: 0.72rem; letter-spacing: 0.3em; }
+
+  /* placeholder card */
+  .card-soon { border: 1px dashed rgba(168,133,59,0.5); background: rgba(233,223,200,0.14); box-shadow: none; }
+  .card-soon:hover { transform: none; box-shadow: none; }
+  .card-soon .soon-photo {
+    aspect-ratio: 16/9.5; display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 8px; color: var(--gold-deep); background: var(--paper-2);
+  }
+  .card-soon .soon-photo .mark { font-family: var(--serif); font-size: 2.4rem; color: var(--gold); }
+  .card-soon .soon-photo .lbl { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; }
+
+  /* ───────────── FOOTER (DARK) ───────────── */
   footer {
-    background: var(--dark2);
-    border-top: 2px solid var(--gold);
-    text-align: center;
-    padding: 28px 24px;
+    margin-top: 80px; background: var(--night); color: #c8bda5;
+    text-align: center; padding: 70px 24px 46px;
+    border-top: 1px solid rgba(201,168,76,0.35);
   }
-  footer p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 6px; }
-  footer a { color: var(--gold); text-decoration: none; }
-  footer a:hover { text-decoration: underline; }
-  .footer-contact {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-    margin-top: 14px;
+  footer .f-logo { height: 58px; border-radius: 5px; margin-bottom: 20px; }
+  footer .f-name { font-family: var(--serif); font-size: 1.5rem; color: #f2ecdd; margin-bottom: 8px; }
+  footer .f-note { font-size: 0.9rem; color: #a5987d; margin-bottom: 34px; }
+  .f-grid {
+    display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; margin-bottom: 40px;
   }
-  .footer-contact-item { font-size: 0.95rem; color: var(--text-muted); }
-  .footer-contact-item strong { color: var(--gold); display: block; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.06em; }
+  .f-item strong {
+    display: block; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.3em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
+  }
+  .f-item, .f-item a { color: #ded4bd; font-size: 0.95rem; text-decoration: none; }
+  .f-item a:hover { color: #e8c87a; }
+  .f-wa {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid rgba(201,168,76,0.45); border-radius: 999px; padding: 10px 26px;
+    color: #e8c87a !important; font-size: 0.8rem !important; font-weight: 600; letter-spacing: 0.1em;
+    text-transform: uppercase; transition: all .25s;
+  }
+  .f-wa:hover { background: rgba(201,168,76,0.12); }
+  footer .f-legal { font-size: 0.7rem; color: #6b6252; margin-top: 30px; }
 
-  /* ─── DIVIDER ─── */
-  .section-divider {
-    max-width: 1100px;
-    margin: 16px auto 0;
-    padding: 0 24px;
-    border: none;
-    border-top: 1px solid rgba(201,168,76,0.12);
+  /* back to top */
+  .to-top {
+    position: fixed; right: 26px; bottom: 26px; z-index: 300;
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--night-2); color: #e8c87a; border: 1px solid rgba(201,168,76,0.5);
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 1rem;
+    opacity: 0; pointer-events: none; transform: translateY(8px);
+    transition: opacity .3s, transform .3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+  .to-top.show { opacity: 1; pointer-events: auto; transform: none; }
+
+  /* reveal animation */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
   }
 
+  @media (max-width: 860px) {
+    .brand-banner, .brand-banner.flip { grid-template-columns: 1fr; }
+    .brand-banner-img { min-height: 200px; }
+    .glossary-box { grid-template-columns: 1fr; }
+  }
   @media (max-width: 640px) {
-    header { flex-direction: column; gap: 12px; text-align: center; }
-    .brand-header { flex-direction: column; align-items: flex-start; }
-    .hero h2 { font-size: 1.4rem; }
+    .topbar-logo span { display: none; }
+    .brand-head { flex-direction: column; gap: 4px; }
+    .brand-tagline { padding-left: 0; }
+    .hero-stat { padding: 0 18px; }
+    .hero-stat b { font-size: 1.5rem; }
     .product-grid { grid-template-columns: 1fr; }
-    .footer-contact { flex-direction: column; gap: 16px; }
+    .f-grid { gap: 28px; }
   }
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo-area">
-    <img src="LOGO copy.jpg" alt="LGI Global Food Service">
-    <div class="logo-text">
-      <h1>LGI Global Food Service</h1>
-      <p>Selezione Prodotti per la Grande Distribuzione</p>
-    </div>
+<!-- ═══════ STICKY NAV ═══════ -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-logo" href="#top">
+      <img src="LOGO copy.jpg" alt="LGI Global Food Service">
+      <span>LGI Global Food Service</span>
+    </a>
+    <nav class="topnav" id="topnav">
+      <a href="#luxury-tapas">Luxury Tapas</a>
+      <a href="#francescomare">Francescomare</a>
+      <a href="#agricola-tria">Agricola di Tria</a>
+      <a href="#bachetti">Bachetti</a>
+      <a href="#borges">Borges</a>
+    </nav>
   </div>
-  <div class="header-contact">
-    <div>Loriano Iezzi &amp; Giorgio Iezzi</div>
-    <div><a href="tel:+393356310517">📞 335 631 0517</a> · <a href="tel:+393349648317">334 964 8317</a></div>
-    <div><a href="mailto:iezzi@lorianoiezzi.com">✉ iezzi@lorianoiezzi.com</a></div>
+</div>
+
+<!-- ═══════ HERO — DARK COVER ═══════ -->
+<header class="hero" id="top">
+  <div class="hero-content">
+    <div class="hero-eyebrow">LGI Global Food Service · Collezione 2026</div>
+    <h1>Selezione Prodotti<br>per la <em>Grande Distribuzione</em></h1>
+    <p class="hero-sub">Una selezione esclusiva di prodotti premium da aziende certificate, pensata per arricchire l'assortimento della Grande Distribuzione con qualità, innovazione e marginalità.</p>
+    <div class="hero-rule"></div>
   </div>
 </header>
 
-<!-- HERO -->
-<div class="hero">
-  <h2>Nuovi Articoli GDO 2026</h2>
-  <p>Una selezione esclusiva di prodotti premium da aziende certificate, pensata per arricchire l'assortimento della Grande Distribuzione con qualità, innovazione e marginalità.</p>
-  <div class="hero-badge">5 AZIENDE · 30 PRODOTTI SELEZIONATI</div>
-</div>
-
-<!-- NAV PILLS -->
-<nav class="nav-pills">
-  <a href="#luxury-tapas">🥩 Luxury Tapas</a>
-  <a href="#francescomare">🐟 Francescomare</a>
-  <a href="#agricola-tria">🌿 Agricola di Tria</a>
-  <a href="#bachetti">🫒 Bachetti Food</a>
-  <a href="#borges">🫙 Borges</a>
-</nav>
-
 <!-- ═══════════════════════════════════════════
-     AZIENDA 1: LUXURY TAPAS
+     01 · LUXURY TAPAS
 ════════════════════════════════════════════ -->
 <section class="brand-section" id="luxury-tapas">
-  <div class="brand-header">
-    <div class="brand-logo-badge" style="font-style:italic;">Luxury<br>Tapas</div>
-    <div class="brand-info">
-      <h2>Luxury Tapas ✦✦</h2>
-      <p>Soluzioni innovative per la ristorazione — CBT (Cottura Sottovuoto a Bassa Temperatura)</p>
+  <div class="brand-head reveal">
+    <span class="brand-index">01 —</span>
+    <h2>Luxury Tapas <span style="color:var(--gold);font-size:0.55em;vertical-align:middle;">✦✦</span></h2>
+  </div>
+  <p class="brand-tagline reveal">Soluzioni innovative per la ristorazione — CBT · Cottura Sottovuoto a Bassa Temperatura</p>
+
+  <div class="brand-banner reveal">
+    <div class="brand-banner-img" style="background-image:url('luxurytapaslogo.jpg'); background-color:#181617; background-size:contain; background-repeat:no-repeat;"></div>
+    <div class="brand-banner-body">
+      <div class="brand-chips">
+        <span class="chip green">✓ Senza Glutine</span>
+        <span class="chip">Surgelato</span>
+        <span class="chip">Shelf Life 24 Mesi</span>
+        <span class="chip">CBT — Sous Vide</span>
+        <span class="chip">Video Ricetta Incluso</span>
+      </div>
+      <p><strong>La tecnologia CBT al servizio della GDO.</strong> Luxury Tapas produce carni e preparati cotti sottovuoto a bassa temperatura (50–70&nbsp;°C) per ore, garantendo morbidezza, sapore e sicurezza alimentare perfette. Tutti i prodotti sono <strong>senza glutine</strong>, hanno shelf life di <strong>24 mesi</strong> da surgelato (3 mesi in frigo a 0–4&nbsp;°C dopo scongelamento) e includono <strong>video di elaborazione</strong> via QR code per l'operatore GDO.</p>
     </div>
-  </div>
-  <div class="brand-tags">
-    <span class="tag gf" style="color:#7ec87e;">✓ Senza Glutine</span>
-    <span class="tag">❄️ Surgelato</span>
-    <span class="tag">⏱ Shelf Life 24 mesi</span>
-    <span class="tag">CBT — Sous Vide</span>
-    <span class="tag">Video Ricetta Incluso</span>
-  </div>
-  <div class="brand-desc">
-    <strong style="color:var(--gold-light)">La tecnologia CBT al servizio della GDO.</strong> Luxury Tapas produce carni e preparati cotti sottovuoto a bassa temperatura (50–70°C) per ore, garantendo morbidezza, sapore e sicurezza alimentare perfette. Tutti i prodotti sono <strong>Senza Glutine</strong>, hanno shelf life di <strong>24 mesi</strong> da surgelato (3 mesi in frigo a 0–4°C dopo scongelamento) e includono <strong>video di elaborazione</strong> via QR code per l'operatore GDO.
   </div>
 
   <div class="product-grid">
 
     <!-- GUANCIA DI MANZO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Guancia di Manzo CBT</h3>
-        <div class="subtitle">Bovino CBT — cottura +16h sottovuoto</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Senza Glutine</span>
+        <img src="assets_premium/lt_guancia_manzo.jpg" alt="Guancia di Manzo CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Guancia di Manzo CBT</h3>
+        <div class="card-kicker">Bovino CBT — cottura +16h sottovuoto</div>
         <p>Guance di manzo cotte a bassa temperatura per oltre 16 ore. Prodotto tenero e ricco di succo di cottura, da servire intero, tagliato o porzionato con fondo bruno o salsa a piacere.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>6 sacchetti da ±400 g</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>5 min microonde 800W o 10 min bagnomaria</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Bovino CBT</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.1
         </a>
-        <a href="https://youtu.be/O0Ag8ksN_I4?si=aTZN8WVwMa3V8ltz" target="_blank" class="btn-video">
+        <a href="https://youtu.be/O0Ag8ksN_I4?si=aTZN8WVwMa3V8ltz" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -501,30 +417,28 @@
     </div>
 
     <!-- CAPPELLO DEL PRETE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Cappello del Prete di Vitello CBT</h3>
-        <div class="subtitle">Bovino CBT — cottura 16h sottovuoto</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Senza Glutine</span>
+        <img src="assets_premium/lt_cappello_prete.jpg" alt="Cappello del Prete di Vitello CBT" loading="lazy" style="object-position:center 18%;">
       </div>
       <div class="card-body">
+        <h3>Cappello del Prete di Vitello CBT</h3>
+        <div class="card-kicker">Bovino CBT — cottura 16h sottovuoto</div>
         <p>Taglio di vitello ideale per CBT, con venatura di collagene che in cottura dona morbidezza e sapore. Rigenerazione semplice al forno e servizio con il suo succo.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>2 sacchetti da ±2 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>20–25 min forno 200°C</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Vitello</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.1
         </a>
-        <a href="https://www.youtube.com/watch?v=PP5kG3ykBhg" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=PP5kG3ykBhg" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -532,30 +446,28 @@
     </div>
 
     <!-- MEZZO STINCO DI VITELLO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Mezzo Stinco di Vitello CBT</h3>
-        <div class="subtitle">Bovino CBT — cottura +15h, porzione per 2</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Senza Glutine</span>
+        <img src="assets_premium/lt_mezzo_stinco.jpg" alt="Mezzo Stinco di Vitello CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Mezzo Stinco di Vitello CBT</h3>
+        <div class="card-kicker">Bovino CBT — cottura +15h, porzione per 2</div>
         <p>Stinco di vitello cotto sottovuoto per oltre 15 ore. Il mezzo stinco è pensato per due commensali e si rigenera al forno per ottenere esterno rosolato e interno morbido.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>4 sacchetti da 1–1,2 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>25–30 min forno 200°C</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Vitello</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.1
         </a>
-        <a href="https://www.youtube.com/watch?v=OoB8-Y2ZHdg" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=OoB8-Y2ZHdg" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -563,30 +475,28 @@
     </div>
 
     <!-- BRISKET DI ANGUS -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Brisket di Angus CBT</h3>
-        <div class="subtitle">Bovino CBT — punta di petto Angus</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Angus Certificato</span>
+        <img src="assets_premium/lt_brisket.jpg" alt="Brisket di Angus CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Brisket di Angus CBT</h3>
+        <div class="card-kicker">Bovino CBT — punta di petto Angus</div>
         <p>Punta di petto di manzo Angus certificato, cotta sottovuoto per oltre 15 ore con tocco affumicato. Da tagliare sottile contro fibra e servire caldo o freddo.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 5 giorni in frigo dopo scon.</td></tr>
           <tr><td>Servizio</td><td>Fettine sottili con succhi di cottura</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Angus</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.1
         </a>
-        <a href="https://youtu.be/LPQdA0dJWKU?si=9kadyKOfnUL07KZo" target="_blank" class="btn-video">
+        <a href="https://youtu.be/LPQdA0dJWKU?si=9kadyKOfnUL07KZo" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -594,30 +504,28 @@
     </div>
 
     <!-- COSTINA DI MANZO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Costina di Manzo CBT</h3>
-        <div class="subtitle">Beef Short-Ribs — biancostato +15h</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Senza Glutine</span>
+        <img src="assets_premium/lt_costina_manzo.jpg" alt="Costina di Manzo CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Costina di Manzo CBT</h3>
+        <div class="card-kicker">Beef Short-Ribs — biancostato +15h</div>
         <p>Biancostato di manzo cotto sottovuoto a bassa temperatura per oltre 15 ore. Prodotto pronto da rigenerare al forno e servire con il succo di cottura.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>6 sacchetti da ±550 g</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>15–20 min forno 200°C</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Short-Ribs</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=1" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.1
         </a>
-        <a href="https://www.youtube.com/watch?v=dTjcuxTkyZ8&t=2s" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=dTjcuxTkyZ8&t=2s" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -625,30 +533,28 @@
     </div>
 
     <!-- GIRELLO DI VITELLO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Girello di Vitello CBT</h3>
-        <div class="subtitle">Bovino CBT — ideale vitello tonnato</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Senza Glutine</span>
+        <img src="assets_premium/lt_girello.jpg" alt="Girello di Vitello CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Girello di Vitello CBT</h3>
+        <div class="card-kicker">Bovino CBT — ideale vitello tonnato</div>
         <p>Girello di vitello cotto a bassa temperatura per mantenere una consistenza rosata. Pensato per vitello tonnato, roast beef e servizio freddo affettato.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>4 sacchetti da 1–1,6 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Servizio</td><td>Affettatrice o coltello a lama liscia</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Vitello</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.2
         </a>
-        <a href="https://youtu.be/FM89TPpzLcs?si=xZi8BV_935MV0J8b" target="_blank" class="btn-video">
+        <a href="https://youtu.be/FM89TPpzLcs?si=xZi8BV_935MV0J8b" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -656,26 +562,24 @@
     </div>
 
     <!-- FONDO BRUNO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Fondo Bruno / Demi-Glace</h3>
-        <div class="subtitle">Base premium con coda di manzo e verdure</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Demi-Glace</span>
+        <img src="assets_premium/lt_fondo_bruno.jpg" alt="Fondo Bruno / Demi-Glace" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Fondo Bruno / Demi-Glace</h3>
+        <div class="card-kicker">Base premium con coda di manzo e verdure</div>
         <p>Fondo bruno premium con 40% di coda di manzo cotta per oltre 6 ore con verdure fresche. Da usare come fondo, demi-glace, base salsa o brodo diluito.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>2 secchielli da 1,4 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 5 giorni in frigo dopo scon.</td></tr>
           <tr><td>Preparazione</td><td>Riscaldare fino a ebollizione e rimescolare</td></tr>
           <tr><td>Uso</td><td>Fondo bruno, salsa carne, brodo diluito</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Demi-Glace</span>
-          <span class="badge-icon">Base Salsa</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.2
         </a>
@@ -683,51 +587,51 @@
     </div>
 
     <!-- GUANCIA DI MAIALE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Guancia di Maiale CBT</h3>
-        <div class="subtitle">Suino CBT — cottura +9h sottovuoto</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Senza Glutine</span>
+        <img src="assets_premium/lt_guancia_maiale.jpg" alt="Guancia di Maiale CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Guancia di Maiale CBT</h3>
+        <div class="card-kicker">Suino CBT — cottura +9h sottovuoto</div>
         <p>Guance di maiale cotte sottovuoto a bassa temperatura per oltre 9 ore. Si possono servire intere oppure tagliate e scottate ad alta temperatura con salsa a piacere.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>5 min microonde 800W o 10 min bagnomaria</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Suino CBT</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.2
         </a>
-        <a href="https://youtu.be/Fy5HkrqtSOg?si=vvhKU9bVtGZ7bwmD" target="_blank" class="btn-video">
+        <a href="https://youtu.be/Fy5HkrqtSOg?si=vvhKU9bVtGZ7bwmD" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
       </div>
     </div>
 
-    <!-- COSTINE DI MAIALE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Costine di Maiale Ribs CBT</h3>
-        <div class="subtitle">Suino CBT — varianti BBQ ed erbe aromatiche</div>
+    <!-- COSTINE DI MAIALE RIBS -->
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">2 Gusti</span>
+        <img src="assets_premium/lt_ribs.jpg" alt="Costine di Maiale Ribs CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Costine di Maiale Ribs CBT</h3>
+        <div class="card-kicker">Suino CBT — varianti BBQ ed erbe aromatiche</div>
         <p>Costine di maiale cotte sottovuoto per oltre 12 ore, pronte per rigenerazione rapida al forno. La scheda copre le due varianti disponibili, pensate per presidiare sia una proposta BBQ sia una versione mediterranea alle erbe.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>6 sacchetti da ±600 g</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>15 min forno 180–200°C</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
-        <div class="variant-box">
+        <div class="variants">
           <strong>Gusti disponibili</strong>
           <ul>
             <li>Ribs BBQ — marinatura morbida e delicata</li>
@@ -735,17 +639,12 @@
           </ul>
         </div>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Suino CBT</span>
-          <span class="badge-icon">2 Gusti</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.2
         </a>
-        <a href="https://www.youtube.com/watch?v=MDygtskJrQA" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=MDygtskJrQA" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -753,30 +652,28 @@
     </div>
 
     <!-- PULLED PORK -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Pulled Pork — Capocollo di Maiale CBT</h3>
-        <div class="subtitle">Suino CBT — cotto 12h, pronto da sfilacciare</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Senza Glutine</span>
+        <img src="assets_premium/lt_pulled_pork.jpg" alt="Pulled Pork — Capocollo di Maiale CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Pulled Pork — Capocollo di Maiale CBT</h3>
+        <div class="card-kicker">Suino CBT — cotto 12h, pronto da sfilacciare</div>
         <p>Capocollo di maiale cotto a bassa temperatura per oltre 12 ore, elaborato con carne e spezie. Soluzione pronta per tacos, burger, panini, piadine e fajitas.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>4 min microonde 800W</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Pulled</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.2
         </a>
-        <a href="https://www.youtube.com/watch?v=Q4UMk4Vw0GM" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=Q4UMk4Vw0GM" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -784,30 +681,28 @@
     </div>
 
     <!-- STINCO DI MAIALE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Stinco di Maiale CBT</h3>
-        <div class="subtitle">Suino CBT — 2 mezzi stinchi per sacchetto</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">2 Porzioni</span>
+        <img src="assets_premium/lt_stinco_maiale.jpg" alt="Stinco di Maiale CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Stinco di Maiale CBT</h3>
+        <div class="card-kicker">Suino CBT — 2 mezzi stinchi per sacchetto</div>
         <p>Stinco di maiale cotto a bassa temperatura. Ogni sacchetto contiene uno stinco intero già diviso in due porzioni individuali, pratiche per servizio e reparto.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Cartone</td><td>6 sacchetti · 12 porzioni totali</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>20 min forno 200°C</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">2 Porzioni</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.2
         </a>
-        <a href="https://www.youtube.com/watch?v=fpJnZsQUhoM" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=fpJnZsQUhoM" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -815,30 +710,28 @@
     </div>
 
     <!-- PULLED CHICKEN -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Pulled Chicken — Sovracoscia CBT</h3>
-        <div class="subtitle">Avicolo CBT — sovracoscia di pollo intera</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Senza Glutine</span>
+        <img src="assets_premium/lt_pulled_chicken.jpg" alt="Pulled Chicken — Sovracoscia CBT" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Pulled Chicken — Sovracoscia CBT</h3>
+        <div class="card-kicker">Avicolo CBT — sovracoscia di pollo intera</div>
         <p>Sovracoscia di pollo disossata cotta sottovuoto per oltre 3 ore, elaborata con carne e spezie. Pronta da sfilacciare per tacos, fajitas, burger e panini.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>4 sacchetti da ±1 kg</td></tr>
           <tr><td>Shelf life</td><td>24 mesi · 3 mesi in frigo dopo scon.</td></tr>
           <tr><td>Rigenerazione</td><td>4 min microonde 800W</td></tr>
           <tr><td>Glutine</td><td>Senza Glutine</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon gf">Senza Glutine</span>
-          <span class="badge-icon">Avicolo</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=2" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.2
         </a>
-        <a href="https://www.youtube.com/watch?v=Q4UMk4Vw0GM&t=1s" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=Q4UMk4Vw0GM&t=1s" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -846,30 +739,28 @@
     </div>
 
     <!-- CROQUETAS PANKO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Croquetas Panko al Baccalà</h3>
-        <div class="subtitle">Croquetas Panko — 35 g</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Panko</span>
+        <img src="assets_premium/lt_croquetas_panko.jpg" alt="Croquetas Panko al Baccalà" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Croquetas Panko al Baccalà</h3>
+        <div class="card-kicker">Croquetas Panko — 35 g</div>
         <p>Croquetas con panatura panko croccante e ripieno al baccalà, pensate per frittura diretta da congelato. Linea tapas pronta per aperitivo, banco caldo e servizio food.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>4 sacchetti da 1 kg</td></tr>
           <tr><td>Peso pezzo</td><td>35 g</td></tr>
           <tr><td>Shelf life</td><td>24 mesi</td></tr>
           <tr><td>Frittura</td><td>Max 4–5 pezzi per litro d'olio a 180°C</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Panko</span>
-          <span class="badge-icon">Baccalà</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.3
         </a>
-        <a href="https://www.youtube.com/watch?v=znMQcFcPNA0" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=znMQcFcPNA0" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -877,14 +768,16 @@
     </div>
 
     <!-- GUA BAOS -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Gua Baos</h3>
-        <div class="subtitle">Cucina fusion — 32 g cadauno, vari gusti</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Fusion</span>
+        <img src="assets_premium/lt_gua_baos.jpg" alt="Gua Baos" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Gua Baos</h3>
+        <div class="card-kicker">Cucina fusion — 32 g cadauno, vari gusti</div>
         <p>Panino morbido orientale con più varianti disponibili: mazzancolle curry e scorze di agrumi, guanciale di maiale CBT e kimchee, veggie con latte di tigre, coda di manzo hoisin, coscia d'anatra chili dolce.</p>
-        <div class="variant-box">
+        <div class="variants">
           <strong>Gusti disponibili</strong>
           <ul>
             <li>Mazzancolle, curry e scorze di limone e d'arancia</li>
@@ -894,23 +787,18 @@
             <li>Coscia d'anatra CBT e chili dolce</li>
           </ul>
         </div>
-        <table class="spec-table">
-          <tr><td>Varianti</td><td>Mazzancolle · Maiale kimchee · Veggie ceviche · Manzo hoisin · Anatra chili</td></tr>
+        <table class="spec">
           <tr><td>Confezione</td><td>2 vaschette da 24 pezzi</td></tr>
           <tr><td>Cottura</td><td>5 min vapore senza scongelare</td></tr>
           <tr><td>Shelf life</td><td>24 mesi</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Fusion</span>
-          <span class="badge-icon">Multi-gusto</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.3
         </a>
-        <a href="https://www.youtube.com/watch?v=VwEfDm1cc3o" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=VwEfDm1cc3o" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -918,14 +806,16 @@
     </div>
 
     <!-- GYOZAS -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Gyozas</h3>
-        <div class="subtitle">Cucina fusion — 20/30 g secondo formato, vari gusti</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Fusion</span>
+        <img src="assets_premium/lt_gyozas.jpg" alt="Gyozas" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Gyozas</h3>
+        <div class="card-kicker">Cucina fusion — 20/30 g secondo formato, vari gusti</div>
         <p>Gyozas surgelati con varianti selezionate per proposta fusion: manzo CBT e salsa hoisin, mazzancolle curry e scorze di agrumi, verdura fresca con latte di tigre in stile ceviche.</p>
-        <div class="variant-box">
+        <div class="variants">
           <strong>Gusti disponibili</strong>
           <ul>
             <li>Manzo CBT e salsa hoisin</li>
@@ -933,24 +823,19 @@
             <li>Verdura fresca e latte di tigre &quot;ceviche&quot; (veggie)</li>
           </ul>
         </div>
-        <table class="spec-table">
-          <tr><td>Varianti</td><td>Manzo hoisin · Mazzancolle curry · Veggie ceviche</td></tr>
+        <table class="spec">
           <tr><td>Peso pezzo</td><td>30 g vapore · 20 g padella</td></tr>
           <tr><td>Confezione</td><td>3 vaschette da 40 pezzi</td></tr>
           <tr><td>Cottura</td><td>5 min vapore + doratura in padella</td></tr>
           <tr><td>Shelf life</td><td>24 mesi</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Fusion</span>
-          <span class="badge-icon">Multi-gusto</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.3
         </a>
-        <a href="https://www.youtube.com/watch?v=98pZszBNrW0" target="_blank" class="btn-video">
+        <a href="https://www.youtube.com/watch?v=98pZszBNrW0" target="_blank" class="btn btn-video">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           Video Ricetta
         </a>
@@ -958,26 +843,24 @@
     </div>
 
     <!-- FAJITAS -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Fajitas Tex-Mex</h3>
-        <div class="subtitle">Ricetta speziata pronta in 10 minuti</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Tex-Mex</span>
+        <img src="assets_premium/lt_fajitas.jpg" alt="Fajitas Tex-Mex" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Fajitas Tex-Mex</h3>
+        <div class="card-kicker">Ricetta speziata pronta in 10 minuti</div>
         <p>Fajitas già pronte e farcite a mano con pulled chicken CBT e verdura fresca. Ricetta Tex-Mex speziata dal gusto autentico e pronta per forno senza scongelamento.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>4 vaschette da 24 fajitas</td></tr>
           <tr><td>Cottura</td><td>10 min forno 180°C da surgelato</td></tr>
           <tr><td>Shelf life</td><td>24 mesi</td></tr>
           <tr><td>Linea</td><td>Etnico Tex-Mex</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Tex-Mex</span>
-          <span class="badge-icon">Pronto Forno</span>
-        </div>
-        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="Luxury Tapas.pdf#page=3" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Catalogo p.3
         </a>
@@ -985,14 +868,16 @@
     </div>
 
     <!-- MACINATO DI CINGHIALE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Macinato di Cinghiale</h3>
-        <div class="subtitle">Sierra-Wild — selvaggina surgelata, confezione 1 kg</div>
+    <div class="product-card reveal">
+      <div class="card-photo contain">
+        <span class="card-flag">Selvaggina</span>
+        <img src="assets_premium/sierrawild_logo.png" alt="Macinato di Cinghiale Sierra-Wild" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Macinato di Cinghiale</h3>
+        <div class="card-kicker">Sierra-Wild — selvaggina surgelata, confezione 1 kg</div>
         <p>Macinato di cinghiale Sierra-Wild in confezione sottovuoto, indicato per preparazioni a base di selvaggina. Prodotto da scongelare a 0-4°C e cuocere fino a temperatura interna minima di 75°C.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Codice</td><td>623 · EAN 8436048901832</td></tr>
           <tr><td>Formato</td><td>1 kg · unità vendita 320 x 214 mm</td></tr>
           <tr><td>Confezione</td><td>5 pezzi/cartone · cartone 5 kg</td></tr>
@@ -1000,13 +885,8 @@
           <tr><td>Preparazione</td><td>Scongelare 0-4°C · cottura a cuore min. 75°C</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Surgelato</span>
-          <span class="badge-icon gf">No Allergeni</span>
-          <span class="badge-icon">Scheda Tecnica</span>
-        </div>
-        <a href="FT MACINATO DICINGHIALE-07.10.2025.pdf" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="FT MACINATO DICINGHIALE-07.10.2025.pdf" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Scheda Tecnica
         </a>
@@ -1015,51 +895,57 @@
 
   </div><!-- /product-grid -->
 
-  <a href="Luxury Tapas.pdf" target="_blank" class="btn-catalog">
-    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-    Apri Catalogo Luxury Tapas
-  </a>
-  <a href="https://www.luxurytapas.com" target="_blank" class="btn-website">
-    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-    Sito Web
-  </a>
+  <div class="brand-links reveal">
+    <a href="Luxury Tapas.pdf" target="_blank" class="btn-catalog">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+      Apri Catalogo Luxury Tapas
+    </a>
+    <a href="https://www.luxurytapas.com" target="_blank" class="btn-site">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      Sito Web
+    </a>
+  </div>
 </section>
 
-<hr class="section-divider">
+<div class="divider"><span>✦</span></div>
 
 <!-- ═══════════════════════════════════════════
-     AZIENDA 2: FRANCESCOMARE
+     02 · FRANCESCOMARE
 ════════════════════════════════════════════ -->
 <section class="brand-section" id="francescomare">
-  <div class="brand-header">
-    <div class="brand-logo-badge">Francescomare</div>
-    <div class="brand-info">
-      <h2>Francescomare S.r.l.</h2>
-      <p>Prodotti ittici congelati · San Benedetto del Tronto (AP) · fatti a mano in Italia</p>
+  <div class="brand-head reveal">
+    <span class="brand-index">02 —</span>
+    <h2>Francescomare S.r.l.</h2>
+  </div>
+  <p class="brand-tagline reveal">Prodotti ittici congelati · San Benedetto del Tronto (AP) · fatti a mano in Italia</p>
+
+  <div class="brand-banner flip reveal">
+    <div class="brand-banner-body">
+      <div class="brand-chips">
+        <span class="chip">Ittico</span>
+        <span class="chip">Congelato</span>
+        <span class="chip green">Fatto a Mano in Italia</span>
+        <span class="chip">Bulk 4 kg</span>
+        <span class="chip">GDO / Foodservice</span>
+      </div>
+      <p><strong>Specialità ittiche pronte alla cottura.</strong> Francescomare propone referenze congelate in formato bulk da 4&nbsp;kg, lavorate a mano in Italia e pensate per servizio GDO/foodservice. Le schede tecniche indicano conservazione a temperatura inferiore a -18&nbsp;°C, TMC 18 mesi e utilizzo da congelato, senza scongelamento preventivo.</p>
     </div>
-  </div>
-  <div class="brand-tags">
-    <span class="tag">ITTICO</span>
-    <span class="tag">CONGELATO</span>
-    <span class="tag green">FATTO A MANO IN ITALIA</span>
-    <span class="tag">BULK 4 KG</span>
-    <span class="tag">GDO / FOODSERVICE</span>
-  </div>
-  <div class="brand-desc">
-    <strong style="color:var(--gold-light)">Specialità ittiche pronte alla cottura.</strong> Francescomare propone referenze congelate in formato bulk da 4 kg, lavorate a mano in Italia e pensate per servizio GDO/foodservice. Le schede tecniche indicano conservazione a temperatura inferiore a -18°C, TMC 18 mesi e utilizzo da congelato, senza scongelamento preventivo.
+    <div class="brand-banner-img" style="background-image:url('assets_premium/fm_logo.jpg'); background-color:#ffffff; background-size:contain; background-repeat:no-repeat;"></div>
   </div>
 
   <div class="product-grid">
 
     <!-- CALAMARI PATAGONIA BUTTERFLY INFARINATI -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Calamari Patagonia Butterfly Infarinati</h3>
-        <div class="subtitle">Francescomare — congelati, bulk 4 kg</div>
+    <div class="product-card reveal">
+      <div class="card-photo contain">
+        <span class="card-flag">Fatto a Mano</span>
+        <img src="prodotti_catalogo_pesce/catalogo_prodotti_italiano/08_calamari_infarinati.png" alt="Calamari Patagonia Butterfly Infarinati" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Calamari Patagonia Butterfly Infarinati</h3>
+        <div class="card-kicker">Francescomare — congelati, bulk 4 kg</div>
         <p>Calamaro patagonico infarinato, lavorato a mano in Italia per secondi piatti e fritture. Prodotto da cuocere direttamente da congelato, senza scongelamento preventivo.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Codice</td><td>FCALBUTINF4BK</td></tr>
           <tr><td>Composizione</td><td>Calamaro Patagonia 90% · semola di grano duro/farina di mais 10%</td></tr>
           <tr><td>Confezione</td><td>1 busta da 4 kg · 126 cartoni/bancale</td></tr>
@@ -1068,17 +954,12 @@
           <tr><td>Allergeni</td><td>Molluschi e glutine · tracce di crostacei, pesce e solfiti</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Congelato</span>
-          <span class="badge-icon gf">Fatto a Mano</span>
-          <span class="badge-icon">Bulk 4 kg</span>
-        </div>
-        <a href="prodotti_catalogo_pesce/catalogo_prodotti_italiano/08_calamari_infarinati.png" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="prodotti_catalogo_pesce/catalogo_prodotti_italiano/08_calamari_infarinati.png" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 11.5l2.5 3.01L14.5 10l4.5 6H5l3.5-4.5z"/></svg>
           Foto
         </a>
-        <a href="prodotti_catalogo_pesce/Mod 29 Scheda Tecnica FCALBUTINF4BK_rev.00.pdf" target="_blank" class="btn-page">
+        <a href="prodotti_catalogo_pesce/Mod 29 Scheda Tecnica FCALBUTINF4BK_rev.00.pdf" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Scheda Tecnica
         </a>
@@ -1086,14 +967,16 @@
     </div>
 
     <!-- SPIEDINI CALAMARO E GAMBERO IMPANATI -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Spiedini di Calamaro Patagonia e Gambero Argentino Impanati</h3>
-        <div class="subtitle">Francescomare — congelati, 40-43 pezzi/cartone</div>
+    <div class="product-card reveal">
+      <div class="card-photo contain">
+        <span class="card-flag">Fatto a Mano</span>
+        <img src="prodotti_catalogo_pesce/catalogo_prodotti_italiano/02_spiedino_panato.png" alt="Spiedini di Calamaro Patagonia e Gambero Argentino Impanati" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Spiedini di Calamaro Patagonia e Gambero Argentino Impanati</h3>
+        <div class="card-kicker">Francescomare — congelati, 40-43 pezzi/cartone</div>
         <p>Spiedini impanati di calamaro Patagonia e gambero argentino, indicati come antipasto o secondo piatto. Prodotto lavorato a mano in Italia e da cuocere direttamente da congelato.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Codice</td><td>FSPICALGAMARGIMP4BK</td></tr>
           <tr><td>Composizione</td><td>Calamaro 60% · gambero 30% · impanatura 10%</td></tr>
           <tr><td>Confezione</td><td>1 busta da 4 kg · 40-43 pezzi</td></tr>
@@ -1102,17 +985,12 @@
           <tr><td>Allergeni</td><td>Molluschi, crostacei, glutine e solfiti · tracce di pesce</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Congelato</span>
-          <span class="badge-icon gf">Fatto a Mano</span>
-          <span class="badge-icon">Forno</span>
-        </div>
-        <a href="prodotti_catalogo_pesce/catalogo_prodotti_italiano/02_spiedino_panato.png" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="prodotti_catalogo_pesce/catalogo_prodotti_italiano/02_spiedino_panato.png" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 11.5l2.5 3.01L14.5 10l4.5 6H5l3.5-4.5z"/></svg>
           Foto
         </a>
-        <a href="prodotti_catalogo_pesce/Mod 29 Scheda Tecnica FSPICALGAMARGIMP4BK_rev.00.pdf" target="_blank" class="btn-page">
+        <a href="prodotti_catalogo_pesce/Mod 29 Scheda Tecnica FSPICALGAMARGIMP4BK_rev.00.pdf" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Scheda Tecnica
         </a>
@@ -1120,14 +998,16 @@
     </div>
 
     <!-- SPIEDINI CALAMARO PATAGONIA IMPANATI -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Spiedini di Calamaro Patagonia Impanati</h3>
-        <div class="subtitle">Francescomare — congelati, 50-55 pezzi/cartone</div>
+    <div class="product-card reveal">
+      <div class="card-photo contain">
+        <span class="card-flag">Fatto a Mano</span>
+        <img src="prodotti_catalogo_pesce/catalogo_prodotti_italiano/04_spiedini_di_calamari_panati.png" alt="Spiedini di Calamaro Patagonia Impanati" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Spiedini di Calamaro Patagonia Impanati</h3>
+        <div class="card-kicker">Francescomare — congelati, 50-55 pezzi/cartone</div>
         <p>Spiedini impanati di calamaro Patagonia per antipasti o secondi piatti. Referenza fatta a mano in Italia, in formato bulk, da portare in cottura direttamente da congelata.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Codice</td><td>FSPICALPATIMP4BK</td></tr>
           <tr><td>Composizione</td><td>Calamaro Patagonia 90% · impanatura 10%</td></tr>
           <tr><td>Confezione</td><td>1 busta da 4 kg · 50-55 pezzi</td></tr>
@@ -1136,17 +1016,12 @@
           <tr><td>Allergeni</td><td>Molluschi e glutine · tracce di pesce, crostacei e solfiti</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">Congelato</span>
-          <span class="badge-icon gf">Fatto a Mano</span>
-          <span class="badge-icon">Bulk 4 kg</span>
-        </div>
-        <a href="prodotti_catalogo_pesce/catalogo_prodotti_italiano/04_spiedini_di_calamari_panati.png" target="_blank" class="btn-page">
+      <div class="card-actions">
+        <a href="prodotti_catalogo_pesce/catalogo_prodotti_italiano/04_spiedini_di_calamari_panati.png" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 11.5l2.5 3.01L14.5 10l4.5 6H5l3.5-4.5z"/></svg>
           Foto
         </a>
-        <a href="prodotti_catalogo_pesce/Mod 29 Scheda Tecnica FSPICALPATIMP4BK_rev.00.pdf" target="_blank" class="btn-page">
+        <a href="prodotti_catalogo_pesce/Mod 29 Scheda Tecnica FSPICALPATIMP4BK_rev.00.pdf" target="_blank" class="btn btn-doc">
           <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
           Scheda Tecnica
         </a>
@@ -1155,47 +1030,53 @@
 
   </div><!-- /product-grid -->
 
-  <a href="prodotti_catalogo_pesce/catalogo_prodotti_italiano/contact_sheet_catalogo_italiano.jpg" target="_blank" class="btn-catalog">
-    <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 11.5l2.5 3.01L14.5 10l4.5 6H5l3.5-4.5z"/></svg>
-    Apri Catalogo Foto Francescomare
-  </a>
+  <div class="brand-links reveal">
+    <a href="prodotti_catalogo_pesce/catalogo_prodotti_italiano/contact_sheet_catalogo_italiano.jpg" target="_blank" class="btn-catalog">
+      <svg viewBox="0 0 24 24"><path d="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 11.5l2.5 3.01L14.5 10l4.5 6H5l3.5-4.5z"/></svg>
+      Apri Catalogo Foto Francescomare
+    </a>
+  </div>
 </section>
 
-<hr class="section-divider">
+<div class="divider"><span>✦</span></div>
 
 <!-- ═══════════════════════════════════════════
-     AZIENDA 3: AGRICOLA DI TRIA
+     03 · AGRICOLA DI TRIA
 ════════════════════════════════════════════ -->
 <section class="brand-section" id="agricola-tria">
-  <div class="brand-header">
-    <div class="brand-logo-badge">di Tria</div>
-    <div class="brand-info">
-      <h2>Agricola di Tria ✦</h2>
-      <p>Dal 1991 — Verdure fresche surgelate, ortaggi locali pugliesi di edizione limitata</p>
+  <div class="brand-head reveal">
+    <span class="brand-index">03 —</span>
+    <h2>Agricola di Tria <span style="color:var(--gold);font-size:0.55em;vertical-align:middle;">✦</span></h2>
+  </div>
+  <p class="brand-tagline reveal">Dal 1991 — Verdure fresche surgelate, ortaggi locali pugliesi di edizione limitata</p>
+
+  <div class="brand-banner reveal">
+    <div class="brand-banner-img" style="background-image:url('assets_premium/tr_logo.jpg'); background-color:#0d0c0a; background-size:contain; background-repeat:no-repeat;"></div>
+    <div class="brand-banner-body">
+      <div class="brand-chips">
+        <span class="chip">🇮🇹 Made in Italy</span>
+        <span class="chip green">🌱 Vegan Friendly</span>
+        <span class="chip">Surgelato Fresco</span>
+        <span class="chip">Senza Conservanti</span>
+        <span class="chip">Edizione Limitata</span>
+      </div>
+      <p><strong>Dal 1991 firmiamo la natura.</strong> Agricola di Tria seleziona ortaggi locali pugliesi di altissima qualità, raccolti freschissimi e surgelati immediatamente per preservarne le qualità organolettiche. L'unico conservante è il freddo. Prodotti autoctoni sapientemente ricercati, disponibili tutto l'anno in ogni stagione.</p>
     </div>
-  </div>
-  <div class="brand-tags">
-    <span class="tag">🇮🇹 Made in Italy</span>
-    <span class="tag green">🌱 Vegan Friendly</span>
-    <span class="tag">❄️ Surgelato Fresco</span>
-    <span class="tag">Senza Conservanti</span>
-    <span class="tag">Edizione Limitata</span>
-  </div>
-  <div class="brand-desc">
-    <strong style="color:var(--gold-light)">Dal 1991 firmiamo la natura.</strong> Agricola di Tria seleziona ortaggi locali pugliesi di altissima qualità, raccolti freschissimi e surgelati immediatamente per preservarne le qualità organolettiche. L'unico conservante è il freddo. Prodotti autoctoni sapientemente ricercati, disponibili tutto l'anno in ogni stagione.
   </div>
 
   <div class="product-grid">
 
     <!-- FIORI DI ZUCCHINA -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Fiori di Zucchina</h3>
-        <div class="subtitle">Vuoti · Mozzarella e pomodoro · Alici</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Edizione Limitata</span>
+        <img src="assets_premium/tr_fiori.jpg" alt="Fiori di Zucchina" loading="lazy" style="object-position:center 30%;">
       </div>
       <div class="card-body">
+        <h3>Fiori di Zucchina</h3>
+        <div class="card-kicker">Vuoti · Mozzarella e pomodoro · Alici</div>
         <p>Linea di fiori di zucchina surgelati proposta in più varianti: vuoto per farciture personalizzate, ripieno mozzarella e pomodoro, ripieno con alici. Prodotto premium per antipasti, banco caldo e street food.</p>
-        <div class="variant-box">
+        <div class="variants">
           <strong>Varianti disponibili</strong>
           <ul>
             <li>Vuoto</li>
@@ -1203,347 +1084,313 @@
             <li>Alici</li>
           </ul>
         </div>
-        <table class="spec-table">
-          <tr><td>Varianti</td><td>Vuoto · Mozzarella e pomodoro · Alici</td></tr>
+        <table class="spec">
           <tr><td>Codice</td><td>106 · pack busta 1000 g</td></tr>
           <tr><td>Cottura</td><td>Frig. 175°C 3 min · Air fryer 200°C 6 min · Forno 220°C 10 min</td></tr>
           <tr><td>Cartone</td><td>4 kg · 90 cartoni/pallet</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Multi-gusto</span>
-            <span class="badge-icon">Edizione Limitata</span>
-          </div>
-          <a href="Agricola Tria.pdf#page=24" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.24
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Agricola Tria.pdf#page=24" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.24
+        </a>
       </div>
     </div>
 
     <!-- MIX RONDELLE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Mix Rondelle di Verdure</h3>
-        <div class="subtitle">Carota · Zucchine · Cipolla rossa · Cavolfiori</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Vegan</span>
+        <img src="assets_premium/tr_rondelle.jpg" alt="Mix Rondelle di Verdure" loading="lazy" style="object-position:center 35%;">
       </div>
       <div class="card-body">
+        <h3>Mix Rondelle di Verdure</h3>
+        <div class="card-kicker">Carota · Zucchine · Cipolla rossa · Cavolfiori</div>
         <p>Mix di verdure in formato rondella e bocconcino, pensato per frittura e servizio rapido. Abbina rondelle di carota e zucchine con cipolla rossa e cavolfiori per un assortimento colorato.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Ingredienti</td><td>Carota, zucchine, cipolla rossa, cavolfiori</td></tr>
           <tr><td>Codice</td><td>125 · pack busta 1000 g</td></tr>
           <tr><td>Cottura</td><td>Frig. 175°C 3 min · Air fryer 200°C 6 min · Forno 220°C 10 min</td></tr>
           <tr><td>Cartone</td><td>5 kg · 90 cartoni/pallet</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon gf">Vegan</span>
-            <span class="badge-icon">Mix Verdure</span>
-          </div>
-          <a href="Agricola Tria.pdf#page=37" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.37
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Agricola Tria.pdf#page=37" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.37
+        </a>
       </div>
     </div>
 
     <!-- MIX STICK -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Mix Stick e Frittelline</h3>
-        <div class="subtitle">Zucchine · Melanzane · Cavolfiore · Zucchine e menta</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Vegan</span>
+        <img src="assets_premium/tr_mixstick.jpg" alt="Mix Stick e Frittelline" loading="lazy" style="object-position:center 35%;">
       </div>
       <div class="card-body">
+        <h3>Mix Stick e Frittelline</h3>
+        <div class="card-kicker">Zucchine · Melanzane · Cavolfiore · Zucchine e menta</div>
         <p>Mix composto da stick di zucchine, melanzane e cavolfiore, completato da frittelline zucchine e menta. Soluzione pronta per arricchire il banco fritto con più consistenze nello stesso assortimento.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Ingredienti</td><td>Zucchine, melanzane, cavolfiore, zucchine e menta</td></tr>
           <tr><td>Codice</td><td>126 · pack busta 1000 g</td></tr>
           <tr><td>Cottura</td><td>Frig. 175°C 3 min · Air fryer 200°C 6 min · Forno 220°C 10 min</td></tr>
           <tr><td>Cartone</td><td>5 kg · 90 cartoni/pallet</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon gf">Vegan</span>
-            <span class="badge-icon">Zucchine e Menta</span>
-          </div>
-          <a href="Agricola Tria.pdf#page=36" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.36
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Agricola Tria.pdf#page=36" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.36
+        </a>
       </div>
     </div>
 
   </div><!-- /product-grid -->
 
-  <a href="Agricola Tria.pdf" target="_blank" class="btn-catalog">
-    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-    Apri Catalogo Agricola di Tria
-  </a>
-  <a href="https://www.ditria.eu" target="_blank" class="btn-website">
-    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-    Sito Web
-  </a>
+  <div class="brand-links reveal">
+    <a href="Agricola Tria.pdf" target="_blank" class="btn-catalog">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+      Apri Catalogo Agricola di Tria
+    </a>
+    <a href="https://www.ditria.eu" target="_blank" class="btn-site">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      Sito Web
+    </a>
+  </div>
 </section>
 
-<hr class="section-divider">
+<div class="divider"><span>✦</span></div>
 
 <!-- ═══════════════════════════════════════════
-     AZIENDA 4: BACHETTI FOOD
+     04 · BACHETTI FOOD
 ════════════════════════════════════════════ -->
 <section class="brand-section" id="bachetti">
-  <div class="brand-header">
-    <div class="brand-logo-badge">Bachetti</div>
-    <div class="brand-info">
-      <h2>Bachetti Food — Specialità dei Piceni</h2>
-      <p>Dal 1580, Ascoli Piceno — Prodotti panati e pastellati, tradizione marchigiana</p>
+  <div class="brand-head reveal">
+    <span class="brand-index">04 —</span>
+    <h2>Bachetti Food — Specialità dei Piceni</h2>
+  </div>
+  <p class="brand-tagline reveal">Dal 1580, Ascoli Piceno — Prodotti panati e pastellati, tradizione marchigiana</p>
+
+  <div class="brand-banner flip reveal">
+    <div class="brand-banner-body">
+      <div class="brand-chips">
+        <span class="chip">🇮🇹 100% Made in Italy</span>
+        <span class="chip">Km 0</span>
+        <span class="chip">No OGM</span>
+        <span class="chip">No Additivi Chimici</span>
+        <span class="chip green">BRC Food Certified</span>
+        <span class="chip">Longevity Smartfood</span>
+      </div>
+      <p><strong>La tradizione picena dal 1580.</strong> Bachetti Food nasce dall'esperienza culinaria della famiglia Bachetti unita alle competenze di una biologa nutrizionista. Tutti i prodotti sono <strong>NO OGM, privi di additivi chimici</strong>, glutammato, emulsionanti e conservanti. Ingredienti a Km 0, uova da allevamenti a terra, carne &quot;QM – Qualità garantita dalle Marche&quot;. Certificazione <strong>BRC Food</strong> di livello internazionale.</p>
     </div>
-  </div>
-  <div class="brand-tags">
-    <span class="tag">🇮🇹 100% Made in Italy</span>
-    <span class="tag">Km 0</span>
-    <span class="tag">NO OGM</span>
-    <span class="tag">No Additivi Chimici</span>
-    <span class="tag">BRC Food Certified</span>
-    <span class="tag">Longevity Smartfood</span>
-  </div>
-  <div class="brand-desc">
-    <strong style="color:var(--gold-light)">La tradizione picena dal 1580.</strong> Bachetti Food nasce dall'esperienza culinaria della famiglia Bachetti unita alle competenze di una biologa nutrizionista. Tutti i prodotti sono <strong>NO OGM, privi di additivi chimici</strong>, glutammato, emulsionanti e conservanti. Ingredienti a Km 0, uova da allevamenti a terra, carne "QM – Qualità garantita dalle Marche". Certificazione <strong>BRC Food</strong> di livello internazionale.
+    <div class="brand-banner-img" style="background-image:url('bachetti_logo.png'); background-color:#ffffff; background-size:contain; background-repeat:no-repeat; background-origin:content-box; padding:28px;"></div>
   </div>
 
   <div class="product-grid">
 
     <!-- OLIVE ALL'ASCOLANA -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Olive all'Ascolana</h3>
-        <div class="subtitle">Specialità carne — linea standard</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Km 0 · BRC</span>
+        <img src="assets_premium/ba_olive.jpg" alt="Olive all'Ascolana" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Olive all'Ascolana</h3>
+        <div class="card-kicker">Specialità carne — linea standard</div>
         <p>Olive verdi denocciolate, riempite con un mix di carni cucinate con maestria, poi panate e surgelate. Prodotto simbolo del territorio piceno e proposta centrale per il fritto misto.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Peso pezzo</td><td>19–20 g · 50/52 pezzi/kg</td></tr>
           <tr><td>Confezioni</td><td>2,5 kg · 1 kg · 500 g · 250 g pronto forno</td></tr>
           <tr><td>Cottura</td><td>Friggitrice 165°C 4/5 min · Forno 200°C 8/9 min · Air fryer 200°C 7/8 min</td></tr>
           <tr><td>Codice</td><td>0116</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">BRC</span>
-            <span class="badge-icon">Km 0</span>
-            <span class="badge-icon">Pronto Forno</span>
-          </div>
-          <a href="Bachetti Food.pdf#page=12" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.12
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Bachetti Food.pdf#page=12" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.12
+        </a>
       </div>
     </div>
 
     <!-- MOZZARELLINE PANATE -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Mozzarelline Panate</h3>
-        <div class="subtitle">Vegetariana — cuore filante</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Vegetariana</span>
+        <img src="assets_premium/ba_mozzarelline.jpg" alt="Mozzarelline Panate" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Mozzarelline Panate</h3>
+        <div class="card-kicker">Vegetariana — cuore filante</div>
         <p>Ciliegine di mozzarella panate e surgelate, croccanti fuori e filanti dentro. Formato adatto per aperitivi, buffet, banco caldo e servizio snack.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Peso pezzo</td><td>18–19 g · 52/55 pezzi/kg</td></tr>
           <tr><td>Confezioni</td><td>2,5 kg · 1 kg · 500 g · 250 g pronto forno</td></tr>
           <tr><td>Cottura</td><td>Friggitrice 165°C 3/4 min · Forno 200°C 7/8 min · Air fryer 200°C 6/7 min</td></tr>
           <tr><td>Codice</td><td>0124</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Vegetariana</span>
-            <span class="badge-icon">Pronto Forno</span>
-            <span class="badge-icon">BRC</span>
-          </div>
-          <a href="Bachetti Food.pdf#page=14" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.14
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Bachetti Food.pdf#page=14" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.14
+        </a>
       </div>
     </div>
 
     <!-- ARANCINI ALLA SICILIANA -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Arancini alla Siciliana</h3>
-        <div class="subtitle">Risotto allo zafferano, ragù e piselli</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Street Food</span>
+        <img src="assets_premium/ba_arancini.jpg" alt="Arancini alla Siciliana" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Arancini alla Siciliana</h3>
+        <div class="card-kicker">Risotto allo zafferano, ragù e piselli</div>
         <p>Arancino conico con risotto allo zafferano e cuore di ragù con piselli, panato e surgelato. Prodotto da banco caldo e street food con forte riconoscibilità.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Peso pezzo</td><td>30 / 60 / 120 g</td></tr>
           <tr><td>Confezione</td><td>2 x 2,5 kg · cartone 5 kg</td></tr>
           <tr><td>Cottura</td><td>Friggitrice 165°C 6/7 min · Forno 200°C 10/12 min · Air fryer 200°C 8/9 min</td></tr>
           <tr><td>Codice</td><td>0165 · anche pronto forno</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Pronto Forno</span>
-            <span class="badge-icon">Street Food</span>
-            <span class="badge-icon">BRC</span>
-          </div>
-          <a href="Bachetti Food.pdf#page=22" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.22
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Bachetti Food.pdf#page=22" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.22
+        </a>
       </div>
     </div>
 
     <!-- BOCCONCINI DI CAVOLO VIOLA -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Bocconcini di Cavolo Viola</h3>
-        <div class="subtitle">Vegetariana — cavolo verza viola</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Vegetariana</span>
+        <img src="assets_premium/ba_cavolo.jpg" alt="Bocconcini di Cavolo Viola" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Bocconcini di Cavolo Viola</h3>
+        <div class="card-kicker">Vegetariana — cavolo verza viola</div>
         <p>Bocconcini con cavolo verza viola, cipolla, sedano e carota, avvolti da panatura colorata con rapa rossa essiccata. Proposta vegetariana dal colore distintivo.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Peso pezzo</td><td>28–30 g · 33/55 pezzi/kg</td></tr>
           <tr><td>Confezioni</td><td>2,5 kg · 250 g pronto forno</td></tr>
           <tr><td>Cottura</td><td>Friggitrice 165°C 5/6 min · Forno 200°C 8/9 min · Air fryer 200°C 7/8 min</td></tr>
           <tr><td>Codice</td><td>0281</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Vegetariana</span>
-            <span class="badge-icon">Pronto Forno</span>
-            <span class="badge-icon">BRC</span>
-          </div>
-          <a href="Bachetti Food.pdf#page=25" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.25
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Bachetti Food.pdf#page=25" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.25
+        </a>
       </div>
     </div>
 
     <!-- FORMAGGIO FRITTO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Formaggio Fritto</h3>
-        <div class="subtitle">Vegetariana — gr 40/50</div>
+    <div class="product-card reveal">
+      <div class="card-photo">
+        <span class="card-flag">Vegetariana</span>
+        <img src="assets_premium/ba_formaggio.jpg" alt="Formaggio Fritto" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Formaggio Fritto</h3>
+        <div class="card-kicker">Vegetariana — gr 40/50</div>
         <p>Rettangoli di formaggio di latte vaccino e ovino abruzzese, panati e surgelati. Specialità vegetariana dal cuore filante, ideale per fritto misto e aperitivo.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Peso pezzo</td><td>40–50 g · 20/25 pezzi/kg</td></tr>
           <tr><td>Confezione</td><td>2 x 2,5 kg · cartone 5 kg</td></tr>
           <tr><td>Cottura</td><td>Friggitrice 165°C per 2/3 min</td></tr>
           <tr><td>Codice</td><td>0134</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">Vegetariana</span>
-            <span class="badge-icon">BRC</span>
-            <span class="badge-icon">Monoporzione</span>
-          </div>
-          <a href="Bachetti Food.pdf#page=20" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.20
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Bachetti Food.pdf#page=20" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.20
+        </a>
       </div>
     </div>
 
     <!-- CACIO E OVO -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Cacio e Ovo</h3>
-        <div class="subtitle">Articolo richiesto — scheda catalogo non disponibile</div>
+    <div class="product-card card-soon reveal">
+      <div class="soon-photo">
+        <span class="mark">✦</span>
+        <span class="lbl">In Arrivo</span>
       </div>
       <div class="card-body">
+        <h3>Cacio e Ovo</h3>
+        <div class="card-kicker">Articolo richiesto — scheda in integrazione</div>
         <p>Cacio e ovo inserito nella selezione Bachetti come articolo richiesto, da completare con scheda tecnica e collegamento catalogo quando il materiale sarà disponibile.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Categoria</td><td>Specialità fritta</td></tr>
           <tr><td>Stato scheda</td><td>Da integrare</td></tr>
           <tr><td>Link catalogo</td><td>Non disponibile nella cartella</td></tr>
           <tr><td>Note</td><td>Inserito senza collegamento PDF</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div class="badge-icons">
-          <span class="badge-icon">No Link</span>
-          <span class="badge-icon">Da Catalogare</span>
-        </div>
-      </div>
     </div>
 
   </div><!-- /product-grid -->
 
-  <a href="Bachetti Food.pdf" target="_blank" class="btn-catalog">
-    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-    Apri Catalogo Bachetti Food
-  </a>
-  <a href="https://bachettifood.it" target="_blank" class="btn-website">
-    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-    Sito Web
-  </a>
+  <div class="brand-links reveal">
+    <a href="Bachetti Food.pdf" target="_blank" class="btn-catalog">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+      Apri Catalogo Bachetti Food
+    </a>
+    <a href="https://bachettifood.it" target="_blank" class="btn-site">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      Sito Web
+    </a>
+  </div>
 </section>
 
-<hr class="section-divider">
+<div class="divider"><span>✦</span></div>
 
 <!-- ═══════════════════════════════════════════
-     AZIENDA 5: BORGES
+     05 · BORGES
 ════════════════════════════════════════════ -->
 <section class="brand-section" id="borges">
-  <div class="brand-header">
-    <div class="brand-logo-badge" style="font-size:1.4rem;letter-spacing:0.1em;">BORGES</div>
-    <div class="brand-info">
-      <h2>Borges International Group</h2>
-      <p>Masters since 1896 — Oli professionali per frittura, canale Out of Home</p>
+  <div class="brand-head reveal">
+    <span class="brand-index">05 —</span>
+    <h2>Borges International Group</h2>
+  </div>
+  <p class="brand-tagline reveal">Masters since 1896 — Oli professionali per frittura, canale Out of Home</p>
+
+  <div class="brand-banner reveal">
+    <div class="brand-banner-img" style="background-image:url('assets_premium/bo_pouring.jpg'); background-position:center 32%;"></div>
+    <div class="brand-banner-body">
+      <div class="brand-chips">
+        <span class="chip">11 Fabbriche in 5 Paesi</span>
+        <span class="chip">IFS Food</span>
+        <span class="chip">BRC</span>
+        <span class="chip">Halal</span>
+        <span class="chip">ISO 9001</span>
+        <span class="chip green">Senza Grassi Idrogenati</span>
+        <span class="chip green">Senza Olio di Palma</span>
+        <span class="chip green">Senza Allergeni</span>
+      </div>
+      <p><strong>Masters since 1896.</strong> Borges International Group è leader mondiale nella gestione di aziende agricole e nella commercializzazione di oli, frutta secca e aceti. 11 fabbriche in 5 Paesi, 15 uffici in 10 Paesi, 2.402 ettari di colture. Numerosi premi internazionali. La divisione <strong>Out of Home Professional</strong> è dedicata esclusivamente al canale ristorazione e GDO con formati pratici e alta efficienza.</p>
     </div>
-  </div>
-  <div class="brand-tags">
-    <span class="tag">🌍 11 Fabbriche in 5 Paesi</span>
-    <span class="tag">IFS Food</span>
-    <span class="tag">BRC</span>
-    <span class="tag">Halal</span>
-    <span class="tag">ISO 9001</span>
-    <span class="tag">Senza Grassi Idrogenati</span>
-    <span class="tag">Senza Olio di Palma</span>
-    <span class="tag">Senza Allergeni</span>
-  </div>
-  <div class="brand-desc">
-    <strong style="color:var(--gold-light)">Masters since 1896.</strong> Borges International Group è leader mondiale nella gestione di aziende agricole e nella commercializzazione di oli, frutta secca e aceti. 11 fabbriche in 5 Paesi, 15 uffici in 10 Paesi, 2.402 ettari di colture. Numerosi premi internazionali. La divisione <strong>Out of Home Professional</strong> è dedicata esclusivamente al canale ristorazione e GDO con formati pratici e alta efficienza.
   </div>
 
   <div class="product-grid">
 
     <!-- OLIO TRADITION -->
-    <div class="product-card">
-      <div class="card-header">
-        <h3>Olio Tradition per Frittura</h3>
-        <div class="subtitle">Cod. 906303 · EAN 8410179014067</div>
+    <div class="product-card reveal">
+      <div class="card-photo contain">
+        <span class="card-flag">Out of Home</span>
+        <img src="assets_premium/bo_tradition.png" alt="Olio Tradition per Frittura" loading="lazy">
       </div>
       <div class="card-body">
+        <h3>Olio Tradition per Frittura</h3>
+        <div class="card-kicker">Cod. 906303 · EAN 8410179014067</div>
         <p>Olio per frittura professionale della linea Tradition Borges. Formato 7,5L in tanica PET comprimibile per ottimizzare i rifiuti. Senza grassi idrogenati, senza olio di palma, senza allergeni.</p>
-        <table class="spec-table">
+        <table class="spec">
           <tr><td>Confezione</td><td>2 x 7,5 litri</td></tr>
           <tr><td>Cartone</td><td>15 kg netti · 2 pz/scatola</td></tr>
           <tr><td>Shelf life</td><td>12 mesi</td></tr>
@@ -1552,49 +1399,40 @@
           <tr><td>Additivi</td><td>Senza grassi idrogenati · No palma · No allergeni</td></tr>
         </table>
       </div>
-      <div class="card-footer">
-        <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
-          <div class="badge-icons">
-            <span class="badge-icon">IFS Food</span>
-            <span class="badge-icon">BRC</span>
-            <span class="badge-icon">Halal</span>
-            <span class="badge-icon">ISO 9001</span>
-          </div>
-          <a href="Borges.pdf#page=10" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Catalogo p.10
-          </a>
-          <a href="Borges scheda tecnica.pdf" target="_blank" class="btn-page">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Scheda Tecnica
-          </a>
-          <a href="Borges presentazi..pdf" target="_blank" class="btn-catalog">
-            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-            Presentazione
-          </a>
-        </div>
+      <div class="card-actions">
+        <a href="Borges.pdf#page=10" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Catalogo p.10
+        </a>
+        <a href="Borges scheda tecnica.pdf" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Scheda Tecnica
+        </a>
+        <a href="Borges presentazi..pdf" target="_blank" class="btn btn-doc">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+          Presentazione
+        </a>
       </div>
     </div>
 
   </div><!-- /product-grid -->
 
-  <a href="Borges.pdf" target="_blank" class="btn-catalog">
-    <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
-    Apri Catalogo Borges Professional
-  </a>
-  <a href="https://borges1896.com" target="_blank" class="btn-website">
-    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-    Sito Web
-  </a>
+  <div class="brand-links reveal">
+    <a href="Borges.pdf" target="_blank" class="btn-catalog">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg>
+      Apri Catalogo Borges Professional
+    </a>
+    <a href="https://borges1896.com" target="_blank" class="btn-site">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      Sito Web
+    </a>
+  </div>
 </section>
 
-
-<!-- ═══════════════════════════════════════════
-     GLOSSARIO
-════════════════════════════════════════════ -->
-<div class="glossary">
+<!-- ═══════ GLOSSARIO ═══════ -->
+<div class="glossary reveal">
   <div class="glossary-box">
-    <h3>📖 Glossario Tecnico</h3>
+    <h3>Glossario Tecnico</h3>
     <div class="glossary-item">
       <strong>✦ Tempura</strong>
       <p>Tecnica di frittura giapponese con pastella leggera e aerea preparata con acqua frizzante ghiacciata e farina. Lo shock termico con l'olio caldo crea una crosta croccantissima che non assorbe grassi.</p>
@@ -1606,53 +1444,49 @@
   </div>
 </div>
 
-
-<!-- FOOTER -->
-<footer>
-  <p style="color:var(--gold);font-weight:700;font-size:0.95rem;margin-bottom:4px;">LGI Global Food Service</p>
-  <p>Per informazioni sui prodotti, campionature e condizioni commerciali:</p>
-  <div class="footer-contact">
-    <div class="footer-contact-item">
-      <strong>Referente</strong>
+<!-- ═══════ FOOTER ═══════ -->
+<footer id="contatti">
+  <img class="f-logo" src="LOGO copy.jpg" alt="LGI Global Food Service">
+  <div class="f-name">LGI Global Food Service</div>
+  <p class="f-note">Per informazioni sui prodotti, campionature e condizioni commerciali</p>
+  <div class="f-grid">
+    <div class="f-item">
+      <strong>Referenti</strong>
       Loriano Iezzi &amp; Giorgio Iezzi
     </div>
-    <div class="footer-contact-item">
+    <div class="f-item">
       <strong>Telefono</strong>
       <a href="tel:+393356310517">335 631 0517</a> · <a href="tel:+393349648317">334 964 8317</a>
     </div>
-    <div class="footer-contact-item">
+    <div class="f-item">
       <strong>Email</strong>
       <a href="mailto:iezzi@lorianoiezzi.com">iezzi@lorianoiezzi.com</a>
     </div>
-    <div class="footer-contact-item">
-      <strong>WhatsApp</strong>
-      <a href="https://wa.me/393356310517">Scrivi su WhatsApp</a>
-    </div>
   </div>
-  <p style="margin-top:20px;font-size:0.72rem;color:#5a5040;">© 2026 LGI Global Food Service — Documento riservato per uso commerciale GDO</p>
+  <a class="f-wa" href="https://wa.me/393356310517">Scrivi su WhatsApp</a>
+  <p class="f-legal">© 2026 LGI Global Food Service — Documento riservato per uso commerciale GDO</p>
 </footer>
+
+<a href="#top" class="to-top" id="toTop" aria-label="Torna su">↑</a>
 
 <script>
   (function () {
+    /* ── hash scrolling (same behaviour as original) ── */
     function scrollToCurrentHash(behavior) {
       if (!location.hash) return;
       var target = document.getElementById(decodeURIComponent(location.hash.slice(1)));
       if (!target) return;
       target.scrollIntoView({ block: 'start', behavior: behavior || 'auto' });
     }
-
     scrollToCurrentHash('auto');
     window.setTimeout(function () { scrollToCurrentHash('auto'); }, 100);
     window.setTimeout(function () { scrollToCurrentHash('auto'); }, 500);
-
     window.addEventListener('load', function () {
       window.setTimeout(function () { scrollToCurrentHash('auto'); }, 0);
     });
-
     window.addEventListener('hashchange', function () {
       scrollToCurrentHash('smooth');
     });
-
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
       link.addEventListener('click', function (event) {
         var hash = link.getAttribute('href');
@@ -1664,14 +1498,40 @@
       });
     });
 
+    /* ── reveal on scroll ── */
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+      document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+    }
+
+    /* ── scroll-spy for top nav ── */
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll('#topnav a'));
+    var sections = navLinks.map(function (a) { return document.getElementById(a.getAttribute('href').slice(1)); });
+    function spy() {
+      var pos = window.scrollY + 140;
+      var current = null;
+      sections.forEach(function (s) { if (s && s.offsetTop <= pos) current = s.id; });
+      navLinks.forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+      var t = document.getElementById('toTop');
+      t.classList.toggle('show', window.scrollY > 700);
+    }
+    window.addEventListener('scroll', spy, { passive: true });
+    spy();
+
+    /* ── local preview handling (same as original) ── */
     var isLocalPreview = location.hostname === '127.0.0.1' || location.hostname === 'localhost';
     if (!isLocalPreview) return;
-
-    document.querySelectorAll('.btn-page, .btn-catalog, .btn-website').forEach(function (link) {
+    document.querySelectorAll('.btn-doc, .btn-catalog, .btn-site').forEach(function (link) {
       link.setAttribute('target', '_self');
     });
-
-    // Keep video previews reliable in the in-app browser without altering PDF/catalog links.
     document.addEventListener('click', function (event) {
       var link = event.target.closest('a.btn-video[target="_blank"]');
       if (!link) return;
