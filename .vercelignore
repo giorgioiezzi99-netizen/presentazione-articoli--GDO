@@ -1,0 +1,5 @@
+.build_*/
+archivio/
+.playwright-cli/
+.env*
+.DS_Store
